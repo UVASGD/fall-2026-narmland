@@ -1,0 +1,41 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1789427626
+cc-by-nc-sa-4.0.txt::TextFile::-1::1789427398::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1789427398::0::1::::<><><>0<>0<><>::
+::res://assets/::1789427543
+background_01.png::CompressedTexture2D::8005549928449183325::1789427543::1789427543::1::::<><><>0<>0<>0591bf45b495e67c2633f7223e7fd9ac<>res://.godot/imported/background_01.png-781d5ea3acba19375ad5575f9c228f16.ctex::
+curious.png::CompressedTexture2D::1329017683220482634::1789427543::1789427543::1::::<><><>0<>0<>f6b8c4787c155039fa30c3605bc856b0<>res://.godot/imported/curious.png-4f7778a1648dc93007ed73b6fe0ce562.ctex::
+curiousblink.png::CompressedTexture2D::6437025155070641153::1789427543::1789427543::1::::<><><>0<>0<>fa38d4aba9e458dcbda201a5fa035a8d<>res://.godot/imported/curiousblink.png-60bf629981fd1f32b2926c4330258549.ctex::
+dead.png::CompressedTexture2D::3048058204706393550::1789427543::1789427543::1::::<><><>0<>0<>dce1ad8df3ff07327defea69cfdcb661<>res://.godot/imported/dead.png-2e6151fe06a41f0d752e276812c0ac52.ctex::
+distraught.png::CompressedTexture2D::6527401423633650346::1789427543::1789427543::1::::<><><>0<>0<>8eff7b19d15c77052796af1c6d8a2168<>res://.godot/imported/distraught.png-da58da9e33d361a546591e6df4dd78b6.ctex::
+ground_01.png::CompressedTexture2D::7944591482667320468::1789427543::1789427543::1::::<><><>0<>0<>f07dde21dbd4df3489390fdb41e9851d<>res://.godot/imported/ground_01.png-b787a6992d96f86108b0a16c8a567007.ctex::
+hinge.png::CompressedTexture2D::3553107025992758648::1789427543::1789427543::1::::<><><>0<>0<>3712272c4ac232366adaf2872b235a5d<>res://.godot/imported/hinge.png-6ae46e50fd033c4b1024c6cd5e51c906.ctex::
+icon.svg::CompressedTexture2D::1979805928412117307::1789427543::1789427543::1::::<><><>0<>0<>0d0db37c654d66c1832b720c8cb1a25b<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
+narm leg.png::CompressedTexture2D::7655764119332093571::1789427543::1789427543::1::::<><><>0<>0<>5a21a49b8551d03943100a8c676cac13<>res://.godot/imported/narm leg.png-9f5964c405d512d59b968afb03835226.ctex::
+narmhead.png::CompressedTexture2D::6805212609112748745::1789427543::1789427543::1::::<><><>0<>0<>63b0b605382441e798b3ff219c9651c8<>res://.godot/imported/narmhead.png-513b7734ce86b9da3ea7e882489b4fb4.ctex::
+potato.png::CompressedTexture2D::3843643420784672727::1789427543::1789427543::1::::<><><>0<>0<>63c376d51b9403d6f797d630664a017a<>res://.godot/imported/potato.png-1e83fca169fd45bea467b0d3de9f2753.ctex::
+saw.png::CompressedTexture2D::2695702318563921883::1789427543::1789427543::1::::<><><>0<>0<>c44f5dab92ace8dae728022d42692b20<>res://.godot/imported/saw.png-6da227498c244ab4d8a44627b9f83be9.ctex::
+smile.png::CompressedTexture2D::6368558027798986045::1789427543::1789427543::1::::<><><>0<>0<>2d0c89990cf60bbbaf9a53d5fa65c89d<>res://.godot/imported/smile.png-4ffc1121ef833476b5f6e566a2746bbc.ctex::
+smileblink.png::CompressedTexture2D::8360415358807085395::1789427543::1789427543::1::::<><><>0<>0<>c722a9fbb2a7cbed121f1c91ba58a907<>res://.godot/imported/smileblink.png-5106394bff20e7b7b686c83ccfabab64.ctex::
+worried blink.png::CompressedTexture2D::1249466994450094083::1789427543::1789427543::1::::<><><>0<>0<>09ca8d3419d1e776f53765ed56f04939<>res://.godot/imported/worried blink.png-8fec4f05b4c21e5f5ef02b23646ad1a0.ctex::
+worried.png::CompressedTexture2D::3554987790548046932::1789427543::1789427543::1::::<><><>0<>0<>8de2a1c7814731e6eb4d3d91613fce1a<>res://.godot/imported/worried.png-6d8248d00bba87b5b32894941650ed31.ctex::
+::res://scenes/::1789427543
+face.tscn::PackedScene::2587562242277974524::1789427543::0::1::::<><><>0<>0<><>::res://scripts/face.gd
+floor_28.gd::GDScript::8316390832182904748::1789427543::0::1::::<>StaticBody2D<><>0<>0<><>::
+hinge.tscn::PackedScene::399289383126779683::1789427543::0::1::::<><><>0<>0<><>::res://scripts/hinge.gd<>uid://bqvffhtg1lco3::::res://assets/hinge.png
+lava.tscn::PackedScene::1317436630967798476::1789427543::0::1::::<><><>0<>0<><>::
+legsegment.tscn::PackedScene::8595459916442628085::1789427543::0::1::::<><><>0<>0<><>::res://scripts/narmleg.gd<>uid://dhcrk05w1d7h4::::res://assets/narm leg.png
+narm.tscn::PackedScene::3405980934220643459::1789427543::0::1::::<><><>0<>0<><>::res://scripts/narm.gd<>uid://dupx77ga22s6h::::res://scenes/legsegment.tscn<>uid://c37q4ff7wc7ij::::res://assets/narmhead.png<>uid://bc4o1ir672qrc::::res://scenes/face.tscn
+node_2d.tscn::PackedScene::1271635346069197018::1789427543::0::1::::<><><>0<>0<><>::res://scripts/level.gd<>uid://fxoic5u7ywpn::::res://scenes/hinge.tscn<>uid://dmb7ic1n28kob::::res://assets/background_01.png<>uid://dlgoi4yl7ie8c::::res://assets/ground_01.png<>uid://k11rt806ythl::::res://scenes/potato.tscn<>res://scenes/floor_28.gd<>uid://bjlgyy8dlqq3j::::res://scenes/saw.tscn
+potato.tscn::PackedScene::757172308394665301::1789427543::0::1::::<><><>0<>0<><>::uid://bu05il5fm0oo2::::res://assets/potato.png<>uid://bc4o1ir672qrc::::res://scenes/face.tscn
+saw.gd::GDScript::6027932549734707800::1789427543::0::1::::<>Area2D<><>0<>0<><>::
+saw.tscn::PackedScene::3041236904430969809::1789427543::0::1::::<><><>0<>0<><>::uid://ben2281sq27u2::::res://assets/saw.png<>res://scenes/saw.gd
+::res://scripts/::1789427543
+face.gd::GDScript::8045976142749101570::1789427543::0::1::::<>Sprite2D<><>0<>0<><>::
+global.gd::GDScript::3293401173655227927::1789427543::0::1::::<>Node<><>0<>0<><>::
+hinge.gd::GDScript::2934153393943869691::1789427543::0::1::::<>Area2D<><>0<>0<><>::
+lava.gd::GDScript::7945251058213587168::1789427543::0::1::::<>Area2D<><>0<>0<><>::
+leg_collision.gd::GDScript::764204264285529285::1789427543::0::1::::<>Area2D<><>0<>0<><>::
+level.gd::GDScript::6818928509211360194::1789427543::0::1::::<>Node2D<><>0<>0<><>::
+narm.gd::GDScript::3612275426793914400::1789427543::0::1::::<>Node2D<><>0<>0<><>::
+narmleg.gd::GDScript::2208495907287233530::1789427543::0::1::::<>RigidBody2D<><>0<>0<><>::

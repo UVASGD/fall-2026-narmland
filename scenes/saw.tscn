@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjlgyy8dlqq3j"]
+
+[ext_resource type="Texture2D" uid="uid://ben2281sq27u2" path="res://assets/saw.png" id="1_kdat4"]
+[ext_resource type="Script" path="res://scenes/saw.gd" id="1_rn7n5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nvsh3"]
+radius = 11.8673
+
+[node name="saw" type="Area2D"]
+z_index = 2
+scale = Vector2(12.2185, 3.25001)
+collision_mask = 4
+script = ExtResource("1_rn7n5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(0.578515, 1.91348)
+shape = SubResource("CircleShape2D_nvsh3")
+
+[node name="ColorRect" type="Sprite2D" parent="."]
+position = Vector2(-0.572902, -2.15384)
+scale = Vector2(0.0939981, -0.341538)
+texture = ExtResource("1_kdat4")

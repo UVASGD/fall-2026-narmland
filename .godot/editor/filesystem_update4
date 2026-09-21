@@ -1,1 +1,6 @@
-res://scenes/node_2d.tscn
+res://user_interface/Menus/menu.tscn
+res://resources/menu_theme.tres
+res://user_interface/Buttons/play_button.gd
+res://quit_button.gd
+res://scripts/quit_button.gd
+res://scripts/options_button.gd

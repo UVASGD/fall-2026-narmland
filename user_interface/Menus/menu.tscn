@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bxpemivqxmix"]
+
+[ext_resource type="Theme" uid="uid://crq8kv04fbw6" path="res://resources/menu_theme.tres" id="1_faya6"]
+[ext_resource type="PackedScene" uid="uid://cr4ro8cvp5lm8" path="res://user_interface/Buttons/play_button.tscn" id="1_w750v"]
+[ext_resource type="Texture2D" uid="uid://c2c34pgspiqve" path="res://assets/Narm-Drawing_Wide.png" id="2_faya6"]
+[ext_resource type="Script" uid="uid://cbhqxc4a83o5s" path="res://scripts/quit_button.gd" id="4_86j5f"]
+[ext_resource type="Script" uid="uid://dfipp0pfv0rmx" path="res://scripts/options_button.gd" id="4_b2jqr"]
+
+[node name="Menu" type="Control" unique_id=950786265]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_faya6")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1309133818]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=2006404842]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer" unique_id=2037129252]
+layout_mode = 2
+theme = ExtResource("1_faya6")
+texture = ExtResource("2_faya6")
+
+[node name="Title" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1804489168]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "NarmLand"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1002861310]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PlayButton" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=1287114013 instance=ExtResource("1_w750v")]
+layout_mode = 2
+
+[node name="OptionButton" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=1497873146 instance=ExtResource("1_w750v")]
+layout_mode = 2
+text = "Options"
+script = ExtResource("4_b2jqr")
+
+[node name="ExitButton" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=295882823 instance=ExtResource("1_w750v")]
+layout_mode = 2
+text = "Exit"
+script = ExtResource("4_86j5f")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/VBoxContainer/OptionButton" to="PanelContainer/VBoxContainer/VBoxContainer/OptionButton" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/VBoxContainer/ExitButton" to="PanelContainer/VBoxContainer/VBoxContainer/ExitButton" method="_on_pressed"]

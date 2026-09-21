@@ -19,7 +19,7 @@ smile.png::CompressedTexture2D::6368558027798986045::1789427543::1789427543::1::
 smileblink.png::CompressedTexture2D::8360415358807085395::1789427543::1789427543::1::::<><><>0<>0<>c722a9fbb2a7cbed121f1c91ba58a907<>res://.godot/imported/smileblink.png-5106394bff20e7b7b686c83ccfabab64.ctex::
 worried blink.png::CompressedTexture2D::1249466994450094083::1789427543::1789427543::1::::<><><>0<>0<>09ca8d3419d1e776f53765ed56f04939<>res://.godot/imported/worried blink.png-8fec4f05b4c21e5f5ef02b23646ad1a0.ctex::
 worried.png::CompressedTexture2D::3554987790548046932::1789427543::1789427543::1::::<><><>0<>0<>8de2a1c7814731e6eb4d3d91613fce1a<>res://.godot/imported/worried.png-6d8248d00bba87b5b32894941650ed31.ctex::
-::res://scenes/::1789427627
+::res://scenes/::1790033229
 face.tscn::PackedScene::2587562242277974524::1789427543::0::1::::<><><>0<>0<><>::res://scripts/face.gd
 floor_28.gd::GDScript::8316390832182904748::1789427543::0::1::::<>StaticBody2D<><>0<>0<><>::
 hinge.tscn::PackedScene::399289383126779683::1789427543::0::1::::<><><>0<>0<><>::res://scripts/hinge.gd<>uid://bqvffhtg1lco3::::res://assets/hinge.png
@@ -30,6 +30,13 @@ node_2d.tscn::PackedScene::1271635346069197018::1789427543::0::1::::<><><>0<>0<>
 potato.tscn::PackedScene::757172308394665301::1789427543::0::1::::<><><>0<>0<><>::uid://bu05il5fm0oo2::::res://assets/potato.png<>uid://bc4o1ir672qrc::::res://scenes/face.tscn
 saw.gd::GDScript::6027932549734707800::1789427543::0::1::::<>Area2D<><>0<>0<><>::
 saw.tscn::PackedScene::3041236904430969809::1789427543::0::1::::<><><>0<>0<><>::uid://ben2281sq27u2::::res://assets/saw.png<>res://scenes/saw.gd
+::res://scenes/friends/::1790032637
+::res://scenes/friends/light creature/::1790033142
+light_friend.tscn::PackedScene::4254048887692359456::1790033142::0::1::::<><><>0<>0<><>::uid://3hbd5h5m2nwd::::res://assets/icon.svg
+::res://scenes/levels/::1790033247
+light_creature_test.tscn::PackedScene::871725058213905965::1790033247::0::1::::<><><>0<>0<><>::
+::res://scenes/levels/parts/::0
+floor_piece.tscn::PackedScene::8333109528200336399::1790033416::0::1::::<><><>0<>0<><>::uid://dlgoi4yl7ie8c::::res://assets/ground_01.png
 ::res://scripts/::1789427627
 face.gd::GDScript::8045976142749101570::1789427543::0::1::::<>Sprite2D<><>0<>0<><>::
 global.gd::GDScript::3293401173655227927::1789427543::0::1::::<>Node<><>0<>0<><>::

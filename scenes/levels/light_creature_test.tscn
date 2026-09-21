@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://mojgjdvcyyw8"]
+
+[ext_resource type="PackedScene" uid="uid://b1uxtft61ddjk" path="res://scenes/friends/light creature/light_friend.tscn" id="1_qmxsr"]
+[ext_resource type="PackedScene" uid="uid://dqyvdjq0qy7x8" path="res://scenes/levels/parts/floor_piece.tscn" id="2_7gkc8"]
+
+[node name="Light Creature Test" type="Node2D" unique_id=228620912]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=530161210]
+color = Color(0, 0, 0, 1)
+
+[node name="Light Friend" parent="." unique_id=1596625527 instance=ExtResource("1_qmxsr")]
+position = Vector2(-3, -183)
+
+[node name="Level Parts" type="Node2D" parent="." unique_id=339600977]
+
+[node name="Floor Piece" parent="Level Parts" unique_id=1960944343 instance=ExtResource("2_7gkc8")]
+position = Vector2(10, -2.999939)
+
+[node name="Floor Piece2" parent="Level Parts" unique_id=1694056981 instance=ExtResource("2_7gkc8")]
+position = Vector2(243, -3.0000005)
+
+[node name="Floor Piece3" parent="Level Parts" unique_id=1340836066 instance=ExtResource("2_7gkc8")]
+position = Vector2(-238, 7.1525574e-07)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1396764465]
+offset = Vector2(0, -50)

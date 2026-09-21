@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b1uxtft61ddjk"]
+
+[ext_resource type="Texture2D" uid="uid://3hbd5h5m2nwd" path="res://assets/icon.svg" id="1_4tjwi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkv33"]
+size = Vector2(128, 128)
+
+[sub_resource type="Gradient" id="Gradient_bp4pb"]
+offsets = PackedFloat32Array(0, 0.62702703)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nkv33"]
+gradient = SubResource("Gradient_bp4pb")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Light Friend" type="RigidBody2D" unique_id=1596625527]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=429595600]
+texture = ExtResource("1_4tjwi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=113912394]
+shape = SubResource("RectangleShape2D_nkv33")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1275802304]
+position = Vector2(0, -5.722046e-06)
+scale = Vector2(3, 3)
+energy = 2.0
+texture = SubResource("GradientTexture2D_nkv33")

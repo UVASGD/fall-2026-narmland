@@ -1,1 +1,6 @@
+res://scenes/legsegment.tscn
 res://scenes/node_2d.tscn
+res://scenes/narm.tscn
+res://scripts/level.gd
+res://scenes/node_2d.gd
+res://scripts/narm.gd

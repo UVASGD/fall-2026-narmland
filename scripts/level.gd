@@ -1,10 +1,9 @@
 extends Node2D
 
-@onready var narmScene = preload("res://scenes/narm.tscn")
+@onready var narm_scene = preload("res://scenes/narm.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	narmRevive() # Replace with function body.
-
+	narm_revive() # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -12,14 +11,14 @@ func _process(delta: float) -> void:
 		for child in get_children():
 			if child.name.begins_with("Narm"):
 				child.queue_free()
-				narmRevive()
+				narm_revive()
 	
 
-func narmRevive() -> void:
+func narm_revive() -> void:
 	print("revive")
 	Global.narmDead = false
-	var narmInstance = narmScene.instantiate()
-	add_child(narmInstance)
+	var narm_instance = narm_scene.instantiate()
+	add_child(narm_instance)
 
 
 func _on_saw_body_entered(body: Node2D) -> void:

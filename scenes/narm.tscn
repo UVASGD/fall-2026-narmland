@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bor5ajw3s0bxj"]
+[gd_scene format=3 uid="uid://bor5ajw3s0bxj"]
 
-[ext_resource type="Script" path="res://scripts/narm.gd" id="1_iljgn"]
+[ext_resource type="Script" uid="uid://brp2wbxnve2gy" path="res://scripts/narm.gd" id="1_iljgn"]
 [ext_resource type="PackedScene" uid="uid://dupx77ga22s6h" path="res://scenes/legsegment.tscn" id="2_s0tka"]
 [ext_resource type="Texture2D" uid="uid://c37q4ff7wc7ij" path="res://assets/narmhead.png" id="3_wblsn"]
 [ext_resource type="PackedScene" uid="uid://bc4o1ir672qrc" path="res://scenes/face.tscn" id="4_ngeu0"]
@@ -8,117 +8,117 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60jfq"]
 size = Vector2(33.5, 54)
 
-[node name="Narm" type="Node2D"]
+[node name="Narm" type="Node2D" unique_id=907366097]
 script = ExtResource("1_iljgn")
 
-[node name="PinJoint2D" type="PinJoint2D" parent="."]
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=890506274]
 position = Vector2(18, 0)
 node_a = NodePath("../narmbody")
 node_b = NodePath("../legsegment")
 
-[node name="legsegment" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment" parent="." unique_id=1600457141 instance=ExtResource("2_s0tka")]
 position = Vector2(63, -1)
 rotation = -1.5809
 script = null
 
-[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+[node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=1075143712]
 position = Vector2(111, -1)
 rotation = -0.000162726
 node_a = NodePath("../legsegment")
 node_b = NodePath("../legsegment2")
 
-[node name="legsegment2" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment2" parent="." unique_id=29967769 instance=ExtResource("2_s0tka")]
 position = Vector2(155, -1)
 rotation = 1.56552
 script = null
 
-[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+[node name="PinJoint2D3" type="PinJoint2D" parent="." unique_id=777618636]
 position = Vector2(203, -1)
 rotation = -0.000162726
 node_a = NodePath("../legsegment2")
 node_b = NodePath("../legsegment3")
 
-[node name="legsegment3" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment3" parent="." unique_id=1212083413 instance=ExtResource("2_s0tka")]
 position = Vector2(246, -2)
 rotation = 1.56053
 script = null
 
-[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+[node name="PinJoint2D4" type="PinJoint2D" parent="." unique_id=900580113]
 position = Vector2(295, -3)
 rotation = -0.000162726
 node_a = NodePath("../legsegment3")
 node_b = NodePath("../legsegment6")
 
-[node name="legsegment6" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment6" parent="." unique_id=1451426189 instance=ExtResource("2_s0tka")]
 modulate = Color(0, 1, 1, 1)
 position = Vector2(338, -3)
 rotation = 1.57201
 
-[node name="PinJointFeet2" type="PinJoint2D" parent="."]
+[node name="PinJointFeet2" type="PinJoint2D" parent="." unique_id=572238339]
 position = Vector2(384, -3.99991)
 rotation = -3.10472
 node_a = NodePath("../legsegment6")
 
-[node name="ColorRect" type="ColorRect" parent="PinJointFeet2"]
+[node name="ColorRect" type="ColorRect" parent="PinJointFeet2" unique_id=1288741491]
 visible = false
 offset_left = -18.725
 offset_top = -19.3228
 offset_right = 21.275
 offset_bottom = 20.6772
 
-[node name="PinJoint2D5" type="PinJoint2D" parent="."]
+[node name="PinJoint2D5" type="PinJoint2D" parent="." unique_id=1070344982]
 position = Vector2(-19, 0)
 node_a = NodePath("../narmbody")
 node_b = NodePath("../legsegment4")
 
-[node name="legsegment4" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment4" parent="." unique_id=1644333848 instance=ExtResource("2_s0tka")]
 position = Vector2(-64, -1.90735e-06)
 rotation = 1.57437
 script = null
 
-[node name="PinJoint2D6" type="PinJoint2D" parent="."]
+[node name="PinJoint2D6" type="PinJoint2D" parent="." unique_id=1478320554]
 position = Vector2(-109, 1)
 node_a = NodePath("../legsegment4")
 node_b = NodePath("../legsegment7")
 
-[node name="legsegment7" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment7" parent="." unique_id=475840647 instance=ExtResource("2_s0tka")]
 position = Vector2(-153, 2.00002)
 rotation = 1.54098
 script = null
 
-[node name="PinJoint2D7" type="PinJoint2D" parent="."]
+[node name="PinJoint2D7" type="PinJoint2D" parent="." unique_id=1749221323]
 position = Vector2(-199, 4)
 node_a = NodePath("../legsegment7")
 node_b = NodePath("../legsegment5")
 
-[node name="legsegment5" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment5" parent="." unique_id=2048422645 instance=ExtResource("2_s0tka")]
 position = Vector2(-243, 5)
 rotation = 1.54098
 script = null
 
-[node name="PinJoint2D8" type="PinJoint2D" parent="."]
+[node name="PinJoint2D8" type="PinJoint2D" parent="." unique_id=231326731]
 position = Vector2(-291, 7)
 node_a = NodePath("../legsegment5")
 node_b = NodePath("../legsegment8")
 
-[node name="legsegment8" parent="." instance=ExtResource("2_s0tka")]
+[node name="legsegment8" parent="." unique_id=1418832646 instance=ExtResource("2_s0tka")]
 modulate = Color(0, 1, 1, 1)
 position = Vector2(-334, 8)
 rotation = 1.54098
 
-[node name="PinJointFeet1" type="PinJoint2D" parent="."]
+[node name="PinJointFeet1" type="PinJoint2D" parent="." unique_id=623672131]
 position = Vector2(-379, 9)
 rotation = 1.54098
 node_a = NodePath("../legsegment8")
 
-[node name="ColorRect" type="ColorRect" parent="PinJointFeet1"]
+[node name="ColorRect" type="ColorRect" parent="PinJointFeet1" unique_id=1676636568]
 visible = false
 offset_left = -19.4247
 offset_top = -19.5878
 offset_right = 20.5753
 offset_bottom = 20.4122
 
-[node name="narmbody" type="RigidBody2D" parent="."]
+[node name="narmbody" type="RigidBody2D" parent="." unique_id=1002964366]
 position = Vector2(0, -20)
 scale = Vector2(1.44, 1.4)
 collision_layer = 4
@@ -126,19 +126,19 @@ input_pickable = true
 can_sleep = false
 freeze_mode = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="narmbody"]
+[node name="Sprite2D" type="Sprite2D" parent="narmbody" unique_id=2000522380]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(0, -5.72205e-06)
 rotation = 0.00583007
 scale = Vector2(0.261719, 0.265625)
 texture = ExtResource("3_wblsn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="narmbody"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="narmbody" unique_id=713161005]
 shape = SubResource("RectangleShape2D_60jfq")
 
-[node name="face" parent="narmbody" instance=ExtResource("4_ngeu0")]
+[node name="face" parent="narmbody" unique_id=718226026 instance=ExtResource("4_ngeu0")]
 
-[node name="Camera2D" type="Camera2D" parent="narmbody"]
+[node name="Camera2D" type="Camera2D" parent="narmbody" unique_id=977410077]
 position = Vector2(-0.694444, 0)
 zoom = Vector2(0.9, 0.9)
 position_smoothing_enabled = true

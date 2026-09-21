@@ -8,11 +8,15 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="leg-day"
 run/main_scene="res://scenes/node_2d.tscn"
-config/features=PackedStringArray("4.3", "Mobile")
+config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://assets/icon.svg"
 
 [autoload]

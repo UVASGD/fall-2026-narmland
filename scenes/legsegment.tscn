@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6p2utkcx6qek" path="res://scripts/narmleg.gd" id="1_22trx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8tib5"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_powc4"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_sf2mx"]
 
@@ -17,7 +17,7 @@ angular_damp = 100.0
 script = ExtResource("1_22trx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1273822400]
-shape = SubResource("CircleShape2D_8tib5")
+shape = SubResource("CircleShape2D_powc4")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=443557132]
 modulate = Color(1, 1, 0, 1)

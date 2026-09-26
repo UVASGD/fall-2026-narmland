@@ -4,17 +4,24 @@ extends Node2D
 @onready var foot2: RigidBody2D = $legsegment8
 
 var rigidbody_children : Array[RigidBody2D] = []
+var num_leg_one_side = 3
 func _draw() -> void:
 	for i in range(len(rigidbody_children)):
-		
 		var child1 = rigidbody_children[i]
 		var child2
+
 		if i >= len(rigidbody_children) - 1:
 			child2 = child1
 		else:
 			child2 = rigidbody_children[i+1]
 		draw_line(child1.position, child2.position, Color.YELLOW, 20.0)
-		
+
+		#if i != 3 and i != 7:
+			#draw_line(child1.position, child2.position, Color.YELLOW, 20.0)
+		#else:
+			#draw_line(rigidbody_children[0].position, rigidbody_children[4].position, Color.YELLOW, 20.0)
+			
+
 	draw_line(Vector2(50, 50), Vector2(250, 50), Color.GREEN, 5.0)
 	
 	# Draw a blue solid circle: draw_circle(center_pos, radius, color)
@@ -29,6 +36,10 @@ func _ready() -> void:
 	for child in get_children():
 		if child is RigidBody2D:
 			rigidbody_children.append(child)
+	print(rigidbody_children)
+	num_leg_one_side = (len(rigidbody_children) - 1)/2
+	
+	
 	
 
 

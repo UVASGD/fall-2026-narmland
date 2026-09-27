@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://duhm2murxuyh0"]
 
+[ext_resource type="Theme" uid="uid://crq8kv04fbw6" path="res://resources/menu_theme.tres" id="1_l4d3p"]
+[ext_resource type="Script" uid="uid://dt56p5e7tnrje" path="res://user_interface/Menus/back_button.gd" id="2_3jd1b"]
+[ext_resource type="PackedScene" uid="uid://cmaa1arnobg8s" path="res://user_interface/Buttons/h_slider.tscn" id="2_jkedq"]
+[ext_resource type="Script" uid="uid://cr5baeds5cddm" path="res://user_interface/Menus/options.gd" id="2_qv6ft"]
+
 [node name="Options" type="Control" unique_id=1391087907]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +12,58 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_l4d3p")
+script = ExtResource("2_qv6ft")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1646332528]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="PanelContainer" unique_id=703427673]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Back"
+script = ExtResource("2_3jd1b")
+
+[node name="Settings" type="VBoxContainer" parent="PanelContainer" unique_id=19432259]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/Settings" unique_id=898805745]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[u]Settings[/u]"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="MasterVolumeLabel" type="Label" parent="PanelContainer/Settings" unique_id=1654148754]
+layout_mode = 2
+text = "Master:"
+
+[node name="MasterVolume" parent="PanelContainer/Settings" unique_id=2043364887 instance=ExtResource("2_jkedq")]
+layout_mode = 2
+tooltip_text = "Master Volume"
+
+[node name="SoundVolumeLabel" type="Label" parent="PanelContainer/Settings" unique_id=193032097]
+layout_mode = 2
+text = "SFX:"
+
+[node name="SoundVolume" parent="PanelContainer/Settings" unique_id=401716345 instance=ExtResource("2_jkedq")]
+layout_mode = 2
+
+[node name="MusicVolumeLabel" type="Label" parent="PanelContainer/Settings" unique_id=1614286390]
+layout_mode = 2
+text = "Music:"
+
+[node name="MusicVolume" parent="PanelContainer/Settings" unique_id=1171560988 instance=ExtResource("2_jkedq")]
+layout_mode = 2
+
+[connection signal="pressed" from="PanelContainer/BackButton" to="." method="_on_back_button_pressed"]

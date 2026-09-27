@@ -1,8 +1,11 @@
 [gd_resource type="Theme" format=3 uid="uid://crq8kv04fbw6"]
 
+[ext_resource type="FontFile" uid="uid://cxr2adp4b4j0n" path="res://resources/fonts/SuperCreamy-OGAPp.ttf" id="1_muft2"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3g0d"]
 bg_color = Color(0.8010078, 0.89544946, 0.9956538, 1)
 
 [resource]
+default_font = ExtResource("1_muft2")
 default_font_size = 32
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_b3g0d")

@@ -1,6 +1,5 @@
 res://user_interface/Menus/menu.tscn
 res://resources/menu_theme.tres
-res://user_interface/Buttons/play_button.gd
-res://quit_button.gd
-res://scripts/quit_button.gd
-res://scripts/options_button.gd
+res://user_interface/Menus/main_menu.gd
+res://user_interface/Menus/options.gd
+res://user_interface/Menus/options.tscn

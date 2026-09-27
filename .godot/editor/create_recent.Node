@@ -1,6 +1,10 @@
-VBoxContainer
-TextureRect
+AudioStreamPlayer
 Button
+VBoxContainer
 RichTextLabel
+Label
+HBoxContainer
+HSlider
 PanelContainer
+TextureRect
 Control

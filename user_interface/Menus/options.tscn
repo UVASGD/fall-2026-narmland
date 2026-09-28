@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://duhm2murxuyh0"]
 
 [ext_resource type="Theme" uid="uid://crq8kv04fbw6" path="res://resources/menu_theme.tres" id="1_l4d3p"]
-[ext_resource type="Script" uid="uid://dt56p5e7tnrje" path="res://user_interface/Menus/back_button.gd" id="2_3jd1b"]
 [ext_resource type="PackedScene" uid="uid://cmaa1arnobg8s" path="res://user_interface/Buttons/h_slider.tscn" id="2_jkedq"]
 [ext_resource type="Script" uid="uid://cr5baeds5cddm" path="res://user_interface/Menus/options.gd" id="2_qv6ft"]
+[ext_resource type="AudioStream" uid="uid://c3lypau8y2u5d" path="res://resources/sounds/MenuHover.mp3" id="4_3jd1b"]
 
 [node name="Options" type="Control" unique_id=1391087907]
 layout_mode = 3
@@ -28,7 +28,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Back"
-script = ExtResource("2_3jd1b")
 
 [node name="Settings" type="VBoxContainer" parent="PanelContainer" unique_id=19432259]
 layout_mode = 2
@@ -66,4 +65,8 @@ text = "Music:"
 [node name="MusicVolume" parent="PanelContainer/Settings" unique_id=1171560988 instance=ExtResource("2_jkedq")]
 layout_mode = 2
 
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1149933373]
+stream = ExtResource("4_3jd1b")
+
+[connection signal="mouse_entered" from="PanelContainer/BackButton" to="." method="_on_back_button_mouse_entered"]
 [connection signal="pressed" from="PanelContainer/BackButton" to="." method="_on_back_button_pressed"]

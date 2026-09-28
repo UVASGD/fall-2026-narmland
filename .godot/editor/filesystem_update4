@@ -1,5 +1,4 @@
-res://user_interface/Menus/menu.tscn
-res://resources/menu_theme.tres
-res://user_interface/Menus/main_menu.gd
 res://user_interface/Menus/options.gd
 res://user_interface/Menus/options.tscn
+res://resources/menu_theme.tres
+res://user_interface/Menus/back_button.gd

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dpv3xni5xdxyb"]
+
+[ext_resource type="Script" uid="uid://d4kih0inltas3" path="res://scripts/frog.gd" id="1_mqod6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b3g0d"]
+radius = 30.265491
+
+[node name="Frog" type="CharacterBody2D" unique_id=1959093304]
+script = ExtResource("1_mqod6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1055939000]
+shape = SubResource("CircleShape2D_b3g0d")
+
+[node name="FrogSprite" type="AnimatedSprite2D" parent="." unique_id=1644784094]
+
+[node name="Timer" type="Timer" parent="." unique_id=1643232431]

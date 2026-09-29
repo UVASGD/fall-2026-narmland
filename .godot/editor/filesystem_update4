@@ -1,4 +1,8 @@
-res://scenes/friends/light creature/light_friend.tscn
-res://scenes/levels/light_creature_test.tscn
-res://scenes/node_2d.tscn
 res://scenes/narm.tscn
+res://scenes/Narm2.0/narm_2_0.tscn
+res://scenes/Narm2.0/narmleg2.0.gd
+res://scenes/levels/light_creature_test.tscn
+res://scripts/narm.gd
+res://scenes/Narm2.0/narm2.0body.gd
+res://scripts/face.gd
+res://scenes/Narm2.0/face2.0.gd

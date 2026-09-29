@@ -8,6 +8,7 @@ extends Node2D
 func _ready() -> void:
 	global_position = Vector2(500, 72)
 
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

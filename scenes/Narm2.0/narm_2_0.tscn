@@ -91,6 +91,7 @@ position = Vector2(0, -20)
 scale = Vector2(1.44, 1.4)
 collision_layer = 4
 input_pickable = true
+mass = 3.0
 can_sleep = false
 freeze_mode = 1
 
@@ -109,7 +110,7 @@ script = ExtResource("5_fdq58")
 
 [node name="Camera2D" type="Camera2D" parent="narmbody" unique_id=382966643]
 position = Vector2(-0.694444, 0)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
@@ -139,25 +140,27 @@ offset_top = -19.3228
 offset_right = 21.275
 offset_bottom = 20.6772
 
-[node name="legsegment6" parent="Feet" unique_id=400846340 instance=ExtResource("2_67h8f")]
+[node name="legsegment6" parent="Feet" unique_id=400846340 node_paths=PackedStringArray("hinge_joint") instance=ExtResource("2_67h8f")]
 modulate = Color(0, 1, 1, 1)
 position = Vector2(338, -3)
 rotation = 1.57201
+mass = 0.5
 script = ExtResource("5_67h8f")
 side = 2
-pull_strength = 3000.0
-max_force = 60000.0
-damping = 10.0
+hinge_joint = NodePath("../PinJointFeet2")
+pull_force = 5000.0
+slow_radius = 10.0
 
-[node name="legsegment8" parent="Feet" unique_id=815542936 instance=ExtResource("2_67h8f")]
+[node name="legsegment8" parent="Feet" unique_id=815542936 node_paths=PackedStringArray("hinge_joint") instance=ExtResource("2_67h8f")]
 modulate = Color(0, 1, 1, 1)
 position = Vector2(-334, 8)
 rotation = 1.54098
+mass = 0.5
 script = ExtResource("5_67h8f")
 side = 0
-pull_strength = 3000.0
-max_force = 60000.0
-damping = 10.0
+hinge_joint = NodePath("../PinJointFeet1")
+pull_force = 5000.0
+slow_radius = 10.0
 
 [connection signal="mouse_entered" from="narmbody" to="narmbody" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="narmbody" to="narmbody" method="_on_mouse_exited"]

@@ -9,10 +9,6 @@
 [node name="Narm2_0" parent="." unique_id=1537832828 instance=ExtResource("1_7gkc8")]
 position = Vector2(0, -400)
 
-[node name="Camera2D" type="Camera2D" parent="Narm2_0" unique_id=1396764465]
-position = Vector2(0, 400)
-offset = Vector2(0, -500)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=530161210]
 visible = false
 color = Color(0, 0, 0, 1)

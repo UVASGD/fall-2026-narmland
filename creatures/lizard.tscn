@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://b083u567uxf80"]
+
+[ext_resource type="Script" uid="uid://m5tfw4mu08el" path="res://creatures/creature.gd" id="1_2jadk"]
+[ext_resource type="Script" uid="uid://bds4v0tlnpxnj" path="res://creatures/joint_data.gd" id="2_2jadk"]
+[ext_resource type="Texture2D" uid="uid://3hbd5h5m2nwd" path="res://assets/icon.svg" id="2_k3137"]
+
+[sub_resource type="Resource" id="Resource_4yxrg"]
+script = ExtResource("2_2jadk")
+body_index_2 = 1
+rest = Vector2(-20, -20)
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_2jadk"]
+script = ExtResource("2_2jadk")
+body_index_1 = 1
+body_index_2 = 2
+rest = Vector2(40, 0)
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_xjau0"]
+script = ExtResource("2_2jadk")
+body_index_1 = 2
+body_index_2 = 3
+rest = Vector2(40, 0)
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_mloo6"]
+script = ExtResource("2_2jadk")
+body_index_1 = 1
+body_index_2 = 4
+rest = Vector2(-20, 20)
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_tvavg"]
+script = ExtResource("2_2jadk")
+body_index_1 = 3
+body_index_2 = 5
+rest = Vector2(20, 20)
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_m7ri8"]
+modification_count = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0lah"]
+atlas = ExtResource("2_k3137")
+region = Rect2(62, 68, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sxki6"]
+
+[node name="Node2D" type="Node2D" unique_id=1161362259 node_paths=PackedStringArray("bodies")]
+script = ExtResource("1_2jadk")
+bodies = [NodePath("Body/Head"), NodePath("Body/Body"), NodePath("Body/BodyMid"), NodePath("Body/BodyB"), NodePath("Body/LegF"), NodePath("Body/LegB")]
+joint_data = Array[ExtResource("2_2jadk")]([SubResource("Resource_4yxrg"), SubResource("Resource_2jadk"), SubResource("Resource_xjau0"), SubResource("Resource_mloo6"), SubResource("Resource_tvavg")])
+
+[node name="Skeleton2D" type="Skeleton2D" parent="." unique_id=2004318414]
+process_mode = 4
+position = Vector2(-3.000001, 5.999996)
+rotation = 0.5360709
+scale = Vector2(0.99999994, 0.99999994)
+modification_stack = SubResource("SkeletonModificationStack2D_m7ri8")
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D" unique_id=834993950]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D4" type="Bone2D" parent="Skeleton2D/Bone2D" unique_id=1679148559]
+position = Vector2(-4.6982813, 15.586091)
+scale = Vector2(1.0000001, 1.0000001)
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="Bone2D3" type="Bone2D" parent="Skeleton2D/Bone2D" unique_id=1882526336]
+position = Vector2(11.550708, -13.841284)
+scale = Vector2(1.0000001, 1.0000001)
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D5" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3" unique_id=1151278730]
+position = Vector2(15.82396, -10.564199)
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D6" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3/Bone2D5" unique_id=156074729]
+position = Vector2(9.72983, 10.503822)
+rotation = 0.89884454
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 1.7075472e-06
+
+[node name="Bone2D2" type="Bone2D" parent="Skeleton2D/Bone2D" unique_id=1459097824]
+position = Vector2(-22.574951, -14.504187)
+scale = Vector2(1.0000001, 1.0000001)
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="Body" type="Node2D" parent="." unique_id=1272036705]
+
+[node name="Body" type="RigidBody2D" parent="Body" unique_id=672436749]
+collision_layer = 8
+mass = 0.1
+
+[node name="Body" type="Sprite2D" parent="Body/Body" unique_id=2000176005]
+modulate = Color(0, 0, 0, 1)
+rotation = -0.033189286
+scale = Vector2(15.006099, 15.006099)
+texture = SubResource("AtlasTexture_t0lah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Body" unique_id=993985198]
+shape = SubResource("CircleShape2D_sxki6")
+
+[node name="BodyB" type="RigidBody2D" parent="Body" unique_id=1393923726]
+position = Vector2(38, -1)
+collision_layer = 8
+mass = 0.1
+
+[node name="BodyB" type="Sprite2D" parent="Body/BodyB" unique_id=1839730839]
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_t0lah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyB" unique_id=1840319194]
+shape = SubResource("CircleShape2D_sxki6")
+
+[node name="BodyMid" type="RigidBody2D" parent="Body" unique_id=1498774460]
+position = Vector2(19, -1)
+collision_layer = 8
+mass = 0.1
+
+[node name="BodyMid" type="Sprite2D" parent="Body/BodyMid" unique_id=558530621]
+modulate = Color(0.4745098, 0.44705883, 0.4745098, 1)
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_t0lah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyMid" unique_id=265219944]
+shape = SubResource("CircleShape2D_sxki6")
+
+[node name="LegF" type="RigidBody2D" parent="Body" unique_id=294224504]
+position = Vector2(-10, 18)
+collision_layer = 8
+mass = 0.1
+
+[node name="LegF" type="Sprite2D" parent="Body/LegF" unique_id=649312184]
+modulate = Color(1, 0, 0, 1)
+rotation = -0.033189286
+scale = Vector2(15.006099, 15.006099)
+texture = SubResource("AtlasTexture_t0lah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LegF" unique_id=1926392047]
+shape = SubResource("CircleShape2D_sxki6")
+
+[node name="LegB" type="RigidBody2D" parent="Body" unique_id=1450591974]
+position = Vector2(44, 19)
+collision_layer = 8
+
+[node name="LegB" type="Sprite2D" parent="Body/LegB" unique_id=1836435163]
+modulate = Color(1, 0, 0, 1)
+rotation = -0.03318928
+scale = Vector2(15.006099, 15.006099)
+texture = SubResource("AtlasTexture_t0lah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LegB" unique_id=357356266]
+shape = SubResource("CircleShape2D_sxki6")
+
+[node name="Head" type="RigidBody2D" parent="Body" unique_id=1211918491]
+position = Vector2(-15, -16)
+collision_layer = 8
+mass = 0.1
+
+[node name="Head" type="Sprite2D" parent="Body/Head" unique_id=810411372]
+modulate = Color(0, 1, 0, 1)
+rotation = -2.8804803
+scale = Vector2(15.005834, 15.005834)
+texture = SubResource("AtlasTexture_t0lah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Head" unique_id=1607016759]
+shape = SubResource("CircleShape2D_sxki6")
+
+[node name="IK Targets" type="Node2D" parent="." unique_id=602179622]
+
+[node name="Head" type="Node2D" parent="IK Targets" unique_id=2136894837]
+position = Vector2(-15, -20)
+
+[node name="LegF" type="Node2D" parent="IK Targets" unique_id=472236194]
+position = Vector2(-8, 22)
+
+[node name="LegB" type="Node2D" parent="IK Targets" unique_id=1425278743]
+position = Vector2(39, 22)

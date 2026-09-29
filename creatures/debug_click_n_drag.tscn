@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dlqvxpswfymb4"]
+
+[ext_resource type="Script" uid="uid://prbwnpe55jlv" path="res://creatures/debug_click_n_drag.gd" id="1_omwsg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sxki6"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sxki6"]
+
+[node name="Node2D" type="Node2D" unique_id=1092314908]
+script = ExtResource("1_omwsg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1760071467]
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=265095329]
+shape = SubResource("CircleShape2D_sxki6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1615066754]
+modulate = Color(1, 1, 1, 0.1764706)
+scale = Vector2(8.5, 8.5)
+texture = SubResource("PlaceholderTexture2D_sxki6")

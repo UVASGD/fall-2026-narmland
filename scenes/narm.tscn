@@ -42,7 +42,6 @@ node_b = NodePath("../legsegment3")
 [node name="legsegment3" parent="." unique_id=1706871616 instance=ExtResource("2_s0tka")]
 position = Vector2(246, -2)
 rotation = 1.56053
-script = null
 
 [node name="PinJoint2D4" type="PinJoint2D" parent="." unique_id=671117819]
 position = Vector2(295, -3)
@@ -143,5 +142,7 @@ shape = SubResource("RectangleShape2D_60jfq")
 position = Vector2(0, 14.285715)
 scale = Vector2(0.6944444, 0.71428573)
 
+[connection signal="narm_leg_grabbed" from="." to="narmbody/Camera" method="on_narm_grab"]
+[connection signal="narm_leg_released" from="." to="narmbody/Camera" method="on_narm_release"]
 [connection signal="mouse_entered" from="narmbody" to="narmbody" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="narmbody" to="narmbody" method="_on_mouse_exited"]

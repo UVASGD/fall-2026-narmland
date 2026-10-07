@@ -8,11 +8,13 @@ extends Camera2D
 @export var time_to_lerp: float = 1.0
 @export var delay_before_lerp: float = 1.0
 
+var narm_leg_grabbed: bool = false
 var current_offset: Vector2 = Vector2.ZERO
 var previous_offset: Vector2 = Vector2.ZERO
 var global_anchor: Vector2 = Vector2.ZERO
 var current_pan_direction: Vector2 = Vector2.ZERO
 var t: float = 0.0
+var t_back: float = 0.0
 var waiting_t: float = 0.0
 
 # Called when the node enters the scene tree for the first time.
@@ -34,8 +36,19 @@ func _process(delta: float) -> void:
 	
 	if new_pan_direction != Vector2.ZERO:
 		pan_to(new_pan_direction, delta)
+	elif current_offset != Vector2.ZERO:
+		pan_back(delta)
 	else:
-		pan_back()
+		if not narm_leg_grabbed:
+			snap_follow_narm()
+		else:
+			stop_following_narm()
+		
+func on_narm_grab(narm_leg: NarmLeg):
+	narm_leg_grabbed = true
+	
+func on_narm_release(narm_leg: NarmLeg):
+	narm_leg_grabbed = false
 		
 	
 
@@ -55,12 +68,14 @@ func get_pan_direction(mouse_pos: Vector2) -> Vector2:
 	return result
 	
 func pan_to(new_pan_direction: Vector2, delta: float):
+	# if different pan direction, start lerping from current offset and reset both time counters
 	if new_pan_direction != current_pan_direction:
 		global_anchor = global_position
 		top_level = true
 		global_position = global_anchor
 		
 		t = 0.0
+		t_back = 0.0
 		current_pan_direction = new_pan_direction
 		previous_offset = current_offset
 		
@@ -71,12 +86,27 @@ func pan_to(new_pan_direction: Vector2, delta: float):
 
 	offset = current_offset
 	
-func pan_back():
+func pan_back(delta: float):
+	# reset timer if just started
+	if current_pan_direction != Vector2.ZERO:
+		t = 0.0
+		t_back = 0.0
+		waiting_t = 0.0
+		current_pan_direction = Vector2.ZERO
+		previous_offset = current_offset
+	
+	if t_back < 1.0:
+		t_back += delta / time_to_lerp
+		current_offset = previous_offset.lerp(Vector2.ZERO, min(t_back, 1))
+	
+	offset = current_offset
+	
+func stop_following_narm():
+	global_anchor = global_position
+	top_level = true
+	global_position = global_anchor
+	
+func snap_follow_narm():
 	top_level = false
 	position = Vector2.ZERO
-	offset = Vector2.ZERO
-	t = 0.0
-	waiting_t = 0.0
-	previous_offset = Vector2.ZERO
 	current_offset = Vector2.ZERO
-	current_pan_direction = Vector2.ZERO

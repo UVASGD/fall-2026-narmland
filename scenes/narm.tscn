@@ -62,6 +62,11 @@ position = Vector2(196, -1)
 rotation = -1.5809
 script = null
 
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=890506274]
+position = Vector2(171, 0)
+node_a = NodePath("../legsegment")
+node_b = NodePath("../legsegment10")
+
 [node name="legsegment10" parent="." unique_id=1720691562 instance=ExtResource("2_s0tka")]
 position = Vector2(140, 2.3841858e-07)
 rotation = -1.5813993
@@ -70,6 +75,8 @@ script = null
 [node name="PinJoint2D10" type="PinJoint2D" parent="." unique_id=968328518]
 position = Vector2(115.00001, 1)
 rotation = -0.00016272604
+node_a = NodePath("../legsegment10")
+node_b = NodePath("../legsegment11")
 
 [node name="legsegment11" parent="." unique_id=1027005034 instance=ExtResource("2_s0tka")]
 position = Vector2(89, 1)
@@ -80,6 +87,8 @@ script = null
 position = Vector2(64, 0)
 rotation = -0.00016272809
 scale = Vector2(1.0000002, 1.0000002)
+node_a = NodePath("../legsegment11")
+node_b = NodePath("../legsegment12")
 
 [node name="legsegment12" parent="." unique_id=1405561830 instance=ExtResource("2_s0tka")]
 position = Vector2(41, 0)
@@ -89,11 +98,7 @@ script = null
 [node name="PinJoint2D12" type="PinJoint2D" parent="." unique_id=1081558058]
 position = Vector2(18, 1)
 node_a = NodePath("../narmbody")
-
-[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=890506274]
-position = Vector2(171, 0)
-node_a = NodePath("../narmbody")
-node_b = NodePath("../legsegment")
+node_b = NodePath("../legsegment12")
 
 [node name="narmbody" type="RigidBody2D" parent="." unique_id=1002964366]
 position = Vector2(0, -20)
@@ -124,45 +129,75 @@ position_smoothing_speed = 1.0
 [node name="PinJoint2D5" type="PinJoint2D" parent="." unique_id=1070344982]
 position = Vector2(-18.999996, 0)
 node_a = NodePath("../narmbody")
+node_b = NodePath("../legsegment9")
+
+[node name="legsegment9" parent="." unique_id=1972492155 instance=ExtResource("2_s0tka")]
+position = Vector2(-39.000034, 0.9999981)
+rotation = 1.57437
+script = null
+
+[node name="PinJoint2D9" type="PinJoint2D" parent="." unique_id=1981629043]
+position = Vector2(-59, 0)
+node_a = NodePath("../legsegment9")
 node_b = NodePath("../legsegment4")
 
 [node name="legsegment4" parent="." unique_id=1644333848 instance=ExtResource("2_s0tka")]
-position = Vector2(-64, -1.90735e-06)
+position = Vector2(-84, 1.364242e-12)
 rotation = 1.57437
 script = null
 
 [node name="PinJoint2D6" type="PinJoint2D" parent="." unique_id=1478320554]
-position = Vector2(-108.99999, 0.9999993)
+position = Vector2(-109, 2)
 node_a = NodePath("../legsegment4")
 node_b = NodePath("../legsegment7")
 
 [node name="legsegment7" parent="." unique_id=475840647 instance=ExtResource("2_s0tka")]
-position = Vector2(-153.00002, 2.0000198)
+position = Vector2(-132.00002, 0.99999976)
 rotation = 1.54098
 script = null
 
 [node name="PinJoint2D7" type="PinJoint2D" parent="." unique_id=1749221323]
-position = Vector2(-198.99998, 3.9999995)
+position = Vector2(-157, 1)
 node_a = NodePath("../legsegment7")
 node_b = NodePath("../legsegment5")
 
 [node name="legsegment5" parent="." unique_id=2048422645 instance=ExtResource("2_s0tka")]
-position = Vector2(-243, 5)
+position = Vector2(-184, 1)
+rotation = 1.54098
+script = null
+
+[node name="PinJoint2D13" type="PinJoint2D" parent="." unique_id=1760196512]
+position = Vector2(-208, 0)
+node_a = NodePath("../legsegment5")
+node_b = NodePath("../legsegment13")
+
+[node name="legsegment13" parent="." unique_id=734762526 instance=ExtResource("2_s0tka")]
+position = Vector2(-230, 1)
+rotation = 1.54098
+script = null
+
+[node name="PinJoint2D14" type="PinJoint2D" parent="." unique_id=494750540]
+position = Vector2(-255, 0)
+node_a = NodePath("../legsegment13")
+node_b = NodePath("../legsegment14")
+
+[node name="legsegment14" parent="." unique_id=1128333216 instance=ExtResource("2_s0tka")]
+position = Vector2(-279, -4.7683716e-07)
 rotation = 1.54098
 script = null
 
 [node name="PinJoint2D8" type="PinJoint2D" parent="." unique_id=231326731]
-position = Vector2(-291, 7)
-node_a = NodePath("../legsegment5")
+position = Vector2(-303, 0)
+node_a = NodePath("../legsegment14")
 node_b = NodePath("../legsegment8")
 
 [node name="legsegment8" parent="." unique_id=1418832646 instance=ExtResource("2_s0tka")]
 modulate = Color(0, 1, 1, 1)
-position = Vector2(-334, 8)
+position = Vector2(-328, 0)
 rotation = 1.54098
 
 [node name="PinJointFeet1" type="PinJoint2D" parent="." unique_id=623672131]
-position = Vector2(-379.00003, 9)
+position = Vector2(-379, 1)
 rotation = 1.54098
 node_a = NodePath("../legsegment8")
 

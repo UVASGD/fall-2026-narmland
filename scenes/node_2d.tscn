@@ -23,7 +23,7 @@ scale = Vector2(1.41412, 1.589)
 texture = ExtResource("2_y1i40")
 
 [node name="floor" type="StaticBody2D" parent="." unique_id=149388220]
-position = Vector2(102, 568)
+position = Vector2(102, 567)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=1678294193]
@@ -108,7 +108,8 @@ position = Vector2(1046, 568)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor11" unique_id=1667141369]
-position = Vector2(-1, 3)
+position = Vector2(-0.00024318695, -1.6447344)
+scale = Vector2(1, 1.2374107)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor11" unique_id=970348403]
@@ -359,7 +360,7 @@ scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor23" unique_id=1296696417]
 position = Vector2(41.6667, 7.87671)
-scale = Vector2(1, 1.21644)
+scale = Vector2(1.666626, 2.0191221)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor23" unique_id=1175503607]
@@ -433,6 +434,9 @@ mass = 0.1
 
 [node name="saw" parent="." unique_id=368665528 instance=ExtResource("7_jlbvi")]
 position = Vector2(1600, 395)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1209577287]
+format = 2
 
 [connection signal="area_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_body_entered"]

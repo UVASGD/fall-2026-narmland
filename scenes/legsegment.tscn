@@ -4,7 +4,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_powc4"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_sf2mx"]
+[sub_resource type="SphereMesh" id="SphereMesh_uthrw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xe1v"]
 size = Vector2(4.5, 5.5)
@@ -23,7 +23,7 @@ shape = SubResource("CircleShape2D_powc4")
 modulate = Color(1, 1, 0, 1)
 position = Vector2(-0.12514226, -0.12499988)
 scale = Vector2(19.772112, 19.750002)
-mesh = SubResource("SphereMesh_sf2mx")
+mesh = SubResource("SphereMesh_uthrw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1312649105]
 

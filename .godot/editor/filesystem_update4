@@ -1,2 +1,4 @@
-res://scenes/node_2d.tscn
 res://scenes/narm.tscn
+res://scripts/narm.gd
+res://scripts/narmleg.gd
+res://scenes/legsegment.tscn

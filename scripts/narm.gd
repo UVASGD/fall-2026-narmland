@@ -6,7 +6,7 @@ extends Node2D
 var rigidbody_children : Array[RigidBody2D] = []
 var num_leg_one_side = 3
 func _draw() -> void:
-	for i in range(len(rigidbody_children)):
+	for i in range(len(rigidbody_children) - 2):
 		var child1 = rigidbody_children[i]
 		var child2
 

@@ -17,6 +17,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			if Global.mouseSelect == self:
 				global_position = get_global_mouse_position();
 				linear_velocity = Vector2.ZERO;
+			
 	
 	
 
@@ -25,6 +26,7 @@ func _on_mouse_entered() -> void:
 	mouseEntered = true;
 	Global.mouseSelect = self
 	face.change_face("curious");
+
 	
 	
 
@@ -39,3 +41,4 @@ func _on_mouse_exited() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	mouseEntered = false
+	mass = 1;

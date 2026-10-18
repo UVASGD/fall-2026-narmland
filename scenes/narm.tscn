@@ -100,32 +100,6 @@ position = Vector2(18, 1)
 node_a = NodePath("../narmbody")
 node_b = NodePath("../legsegment12")
 
-[node name="narmbody" type="RigidBody2D" parent="." unique_id=1002964366]
-position = Vector2(0, -20)
-scale = Vector2(1.44, 1.4)
-collision_layer = 4
-input_pickable = true
-can_sleep = false
-freeze_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="narmbody" unique_id=2000522380]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(0, -5.72205e-06)
-rotation = 0.00583007
-scale = Vector2(0.261719, 0.265625)
-texture = ExtResource("3_wblsn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="narmbody" unique_id=713161005]
-shape = SubResource("RectangleShape2D_60jfq")
-
-[node name="face" parent="narmbody" unique_id=718226026 instance=ExtResource("4_ngeu0")]
-
-[node name="Camera2D" type="Camera2D" parent="narmbody" unique_id=977410077]
-position = Vector2(-0.694444, 0)
-zoom = Vector2(0.9, 0.9)
-position_smoothing_enabled = true
-position_smoothing_speed = 1.0
-
 [node name="PinJoint2D5" type="PinJoint2D" parent="." unique_id=1070344982]
 position = Vector2(-18.999996, 0)
 node_a = NodePath("../narmbody")
@@ -195,6 +169,7 @@ node_b = NodePath("../legsegment8")
 modulate = Color(0, 1, 1, 1)
 position = Vector2(-328, 0)
 rotation = 1.54098
+mass = 1000.0
 
 [node name="PinJointFeet1" type="PinJoint2D" parent="." unique_id=623672131]
 position = Vector2(-379, 1)
@@ -207,6 +182,32 @@ offset_left = -19.4247
 offset_top = -19.5878
 offset_right = 20.5753
 offset_bottom = 20.4122
+
+[node name="narmbody" type="RigidBody2D" parent="." unique_id=1002964366]
+position = Vector2(0, -20)
+scale = Vector2(1.44, 1.4)
+collision_layer = 4
+input_pickable = true
+can_sleep = false
+freeze_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="narmbody" unique_id=2000522380]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(0, -5.72205e-06)
+rotation = 0.00583007
+scale = Vector2(0.261719, 0.265625)
+texture = ExtResource("3_wblsn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="narmbody" unique_id=713161005]
+shape = SubResource("RectangleShape2D_60jfq")
+
+[node name="face" parent="narmbody" unique_id=718226026 instance=ExtResource("4_ngeu0")]
+
+[node name="Camera2D" type="Camera2D" parent="narmbody" unique_id=977410077]
+position = Vector2(-0.694444, 0)
+zoom = Vector2(0.9, 0.9)
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
 
 [connection signal="mouse_entered" from="narmbody" to="narmbody" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="narmbody" to="narmbody" method="_on_mouse_exited"]

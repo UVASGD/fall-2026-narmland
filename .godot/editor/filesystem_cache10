@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1792451947
+::res://::1792452924
 cc-by-nc-sa-4.0.txt::TextFile::-1::1789427398::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1789427398::0::1::::<><><>0<>0<><>::
 ::res://assets/::1792451626
@@ -37,11 +37,11 @@ light_friend.tscn::PackedScene::4254048887692359456::1792451619::0::1::::<><><>0
 light_creature_test.tscn::PackedScene::871725058213905965::1792451619::0::1::::<><><>0<>0<><>::uid://dqktqwmcgj8hk::::res://scenes/Narm2.0/narm_2_0.tscn<>uid://b1uxtft61ddjk::::res://scenes/friends/light creature/light_friend.tscn<>uid://dqyvdjq0qy7x8::::res://scenes/levels/parts/floor_piece.tscn
 ::res://scenes/levels/parts/::1792451619
 floor_piece.tscn::PackedScene::8333109528200336399::1792451619::0::1::::<><><>0<>0<><>::uid://dlgoi4yl7ie8c::::res://assets/ground_01.png
-::res://scenes/Narm2.0/::1792451619
+::res://scenes/Narm2.0/::1792452850
 face2.0.gd::GDScript::1322700053138992379::1792451619::0::1::::<>Sprite2D<><>0<>0<><>::
 narm2.0body.gd::GDScript::8179836119579453547::1792451619::0::1::::<>Node2D<><>0<>0<><>::
-narmleg2.0.gd::GDScript::6803433308165961327::1792451619::0::1::::<>RigidBody2D<><>0<>0<><>::
-narm_2_0.tscn::PackedScene::8304110696544097380::1792451619::0::1::::<><><>0<>0<><>::uid://dosmx851tfnt0::::res://scenes/Narm2.0/narm2.0body.gd<>uid://dupx77ga22s6h::::res://scenes/legsegment.tscn<>uid://c37q4ff7wc7ij::::res://assets/narmhead.png<>uid://bc4o1ir672qrc::::res://scenes/face.tscn<>uid://c36vs12b3x56b::::res://scenes/Narm2.0/narmleg2.0.gd<>uid://s3yxagec70o2::::res://scenes/Narm2.0/face2.0.gd
+narmleg2.0.gd::GDScript::6803433308165961327::1792452699::0::1::::<>RigidBody2D<><>0<>0<><>::
+narm_2_0.tscn::PackedScene::8304110696544097380::1792452850::0::1::::<><><>0<>0<><>::uid://dosmx851tfnt0::::res://scenes/Narm2.0/narm2.0body.gd<>uid://dupx77ga22s6h::::res://scenes/legsegment.tscn<>uid://c37q4ff7wc7ij::::res://assets/narmhead.png<>uid://bc4o1ir672qrc::::res://scenes/face.tscn<>uid://c36vs12b3x56b::::res://scenes/Narm2.0/narmleg2.0.gd<>uid://s3yxagec70o2::::res://scenes/Narm2.0/face2.0.gd
 ::res://scripts/::1792451619
 face.gd::GDScript::8045976142749101570::1790639214::0::1::::<>Sprite2D<><>0<>0<><>::
 global.gd::GDScript::3293401173655227927::1789427543::0::1::::<>Node<><>0<>0<><>::

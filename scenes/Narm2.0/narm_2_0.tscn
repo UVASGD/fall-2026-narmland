@@ -21,6 +21,7 @@ node_b = NodePath("../legsegment")
 [node name="legsegment" parent="." unique_id=1697671447 instance=ExtResource("2_67h8f")]
 position = Vector2(63, -1)
 rotation = -1.5809
+mass = 0.5
 script = null
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=850213895]
@@ -32,6 +33,7 @@ node_b = NodePath("../legsegment2")
 [node name="legsegment2" parent="." unique_id=2103829226 instance=ExtResource("2_67h8f")]
 position = Vector2(155, -1)
 rotation = 1.56552
+mass = 0.5
 script = null
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="." unique_id=291159006]
@@ -43,6 +45,7 @@ node_b = NodePath("../legsegment3")
 [node name="legsegment3" parent="." unique_id=946033846 instance=ExtResource("2_67h8f")]
 position = Vector2(246, -2)
 rotation = 1.56053
+mass = 0.5
 script = null
 
 [node name="PinJoint2D4" type="PinJoint2D" parent="." unique_id=729071853]
@@ -59,6 +62,7 @@ node_b = NodePath("../legsegment4")
 [node name="legsegment4" parent="." unique_id=172129520 instance=ExtResource("2_67h8f")]
 position = Vector2(-64, -1.90735e-06)
 rotation = 1.57437
+mass = 0.5
 script = null
 
 [node name="PinJoint2D6" type="PinJoint2D" parent="." unique_id=201212809]
@@ -69,6 +73,7 @@ node_b = NodePath("../legsegment7")
 [node name="legsegment7" parent="." unique_id=964671827 instance=ExtResource("2_67h8f")]
 position = Vector2(-153, 2.00002)
 rotation = 1.54098
+mass = 0.5
 script = null
 
 [node name="PinJoint2D7" type="PinJoint2D" parent="." unique_id=1629058893]
@@ -79,6 +84,7 @@ node_b = NodePath("../legsegment5")
 [node name="legsegment5" parent="." unique_id=1607089318 instance=ExtResource("2_67h8f")]
 position = Vector2(-243, 5)
 rotation = 1.54098
+mass = 0.5
 script = null
 
 [node name="PinJoint2D8" type="PinJoint2D" parent="." unique_id=1394155636]
@@ -91,7 +97,7 @@ position = Vector2(0, -20)
 scale = Vector2(1.44, 1.4)
 collision_layer = 4
 input_pickable = true
-mass = 5.0
+mass = 0.5
 can_sleep = false
 freeze_mode = 1
 
@@ -148,8 +154,13 @@ mass = 0.5
 script = ExtResource("5_67h8f")
 side = 2
 hinge_joint = NodePath("../PinJointFeet2")
-pull_force = 5000.0
+pull_force = 10000.0
 slow_radius = 10.0
+kick_impulse = 2000.0
+spring_strength = 40.0
+damping = 2.0
+hold_force = 1500.0
+kick_cooldown = 1.0
 
 [node name="legsegment8" parent="Feet" unique_id=815542936 node_paths=PackedStringArray("hinge_joint") instance=ExtResource("2_67h8f")]
 modulate = Color(0, 1, 1, 1)
@@ -159,8 +170,13 @@ mass = 0.5
 script = ExtResource("5_67h8f")
 side = 0
 hinge_joint = NodePath("../PinJointFeet1")
-pull_force = 5000.0
+pull_force = 10000.0
 slow_radius = 10.0
+kick_impulse = 2000.0
+spring_strength = 40.0
+damping = 2.0
+hold_force = 1500.0
+kick_cooldown = 1.0
 
 [connection signal="mouse_entered" from="narmbody" to="narmbody" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="narmbody" to="narmbody" method="_on_mouse_exited"]

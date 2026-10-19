@@ -1,36 +1,30 @@
 extends Camera2D
 
-# Maximum offset allowed when panning the camera
-@export var max_offset_x: float = 200
-@export var max_offset_y: float = 200
-# Defines how far the cursor must be from the edge of the screen to trigger panning
-@export var pan_zone_width: int = 100
-#@export var time_to_lerp: float = 1.0
-#@export var delay_before_lerp: float = 1.0
-
-# Arbitrary value that determines how fast the camera will track the Narm
-@export var lerp_delta = 2
-@export var return_lerp_delta = 10
+@onready var narm: Node2D = get_parent()
 
 enum Status {
 	TRACKING_NARM,
 	ANCHORED
 }
 
-var narm_leg_grabbed: bool = false
-var current_offset: Vector2 = Vector2.ZERO
-var previous_offset: Vector2 = Vector2.ZERO
-var global_anchor: Vector2 = Vector2.ZERO
-var current_pan_direction: Vector2 = Vector2.ZERO
-var t: float = 0.0
-#var waiting_t: float = 0.0
-@onready var narm: Node2D = get_parent()
+# Maximum offset allowed when panning the camera
+@export var pan_offset_x: float = 200
+@export var pan_offset_y: float = 200
+# Defines how far the cursor must be from the edge of the screen to trigger panning
+@export var pan_zone_width: int = 100
 
+# Arbitrary values that determines how fast the camera will lerp to a new position
+@export var lerp_delta = 2
+@export var tracking_lerp_delta = 10
+
+var narm_leg_grabbed: bool = false
 var status: Status = Status.TRACKING_NARM
-	
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# "Detach" the camera from the Narm so it doesn't follow its every movement
+	# Instead we track the narm in the _process function, and constantly lerp to it
 	top_level = true
 
 
@@ -53,13 +47,13 @@ func _process(delta: float) -> void:
 	# follow narm
 	if status == Status.TRACKING_NARM:
 		offset = lerp(offset, Vector2.ZERO, lerp_delta * delta)
-		var new_global_position = lerp(global_position, narm.global_position, lerp_delta * delta)
+		var new_global_position = lerp(global_position, narm.global_position, tracking_lerp_delta * delta)
 		global_position = new_global_position
 	
 	# do not move global position, only move offset	
 	elif status == Status.ANCHORED:
 		var new_offset = lerp(offset, 
-		Vector2(new_pan_direction.x * max_offset_x, new_pan_direction.y * max_offset_y), lerp_delta * delta)
+		Vector2(new_pan_direction.x * pan_offset_x, new_pan_direction.y * pan_offset_y), lerp_delta * delta)
 		offset = new_offset
 			
 	

@@ -20,6 +20,7 @@ var previous_pan_direction: Vector2 = Vector2.ZERO
 @export var lerp_delta = 2
 
 var narm_leg_grabbed: bool = false
+var narm_visible: bool = true
 var status: Status = Status.TRACKING_NARM
 
 
@@ -39,8 +40,11 @@ func _process(delta: float) -> void:
 	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
 	var new_pan_direction: Vector2 = get_pan_direction(mouse_pos)
 	
+	# If narm is not visible on screen start tracking
+	if not narm_visible:
+		status = Status.TRACKING_NARM
 	# Check if we should now anchor - if narm leg grabbed or there is a pan direction
-	if narm_leg_grabbed or new_pan_direction != Vector2.ZERO:
+	elif narm_leg_grabbed or new_pan_direction != Vector2.ZERO:
 		status = Status.ANCHORED
 	else:
 		status = Status.TRACKING_NARM
@@ -89,3 +93,11 @@ func get_pan_direction(mouse_pos: Vector2) -> Vector2:
 	previous_pan_direction = result
 	return result
 	
+
+
+func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
+	narm_visible = true
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	narm_visible = false

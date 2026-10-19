@@ -142,7 +142,14 @@ shape = SubResource("RectangleShape2D_60jfq")
 position = Vector2(0, 14.285715)
 scale = Vector2(0.6944444, 0.71428573)
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="narmbody" unique_id=1340143793]
+position = Vector2(0, 14.285715)
+scale = Vector2(0.6944444, 0.71428573)
+rect = Rect2(-24, -59, 48, 78)
+
 [connection signal="narm_leg_grabbed" from="." to="narmbody/Camera" method="on_narm_grab"]
 [connection signal="narm_leg_released" from="." to="narmbody/Camera" method="on_narm_release"]
 [connection signal="mouse_entered" from="narmbody" to="narmbody" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="narmbody" to="narmbody" method="_on_mouse_exited"]
+[connection signal="screen_entered" from="narmbody/VisibleOnScreenNotifier2D" to="narmbody/Camera" method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="narmbody/VisibleOnScreenNotifier2D" to="narmbody/Camera" method="_on_visible_on_screen_notifier_2d_screen_exited"]

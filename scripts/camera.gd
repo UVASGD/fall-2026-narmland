@@ -45,7 +45,6 @@ func _process(delta: float) -> void:
 	
 	# Check if we should now anchor - if narm leg grabbed or there is a pan direction
 	if narm_leg_grabbed or new_pan_direction != Vector2.ZERO:
-		global_anchor = global_position
 		status = Status.ANCHORED
 	else:
 		status = Status.TRACKING_NARM
@@ -56,9 +55,9 @@ func _process(delta: float) -> void:
 		offset = lerp(offset, Vector2.ZERO, lerp_delta * delta)
 		var new_global_position = lerp(global_position, narm.global_position, lerp_delta * delta)
 		global_position = new_global_position
-		
+	
+	# do not move global position, only move offset	
 	elif status == Status.ANCHORED:
-		global_position = global_anchor
 		var new_offset = lerp(offset, 
 		Vector2(new_pan_direction.x * max_offset_x, new_pan_direction.y * max_offset_y), lerp_delta * delta)
 		offset = new_offset
@@ -89,34 +88,3 @@ func get_pan_direction(mouse_pos: Vector2) -> Vector2:
 	
 	return result
 	
-#func pan_to(delta: float):
-#	# if different pan direction, start lerping from current offset and reset both time counters
-#	if t < 1.0:
-#		t += delta / time_to_lerp
-#		var to: Vector2 = Vector2(current_pan_direction.x * max_offset_x, current_pan_direction.y * max_offset_y)
-#		current_offset = previous_offset.lerp(to, min(t, 1))
-#	else:
-#		status = Status.STILL
-#	offset = current_offset
-#	
-#func pan_back_to_narm(delta: float):
-#	var narm: Node2D = get_parent()
-#	var target_offset: Vector2 = global_anchor - narm.global_position
-#	if t < 1.0:
-#		t += delta / time_to_lerp
-#		current_offset = previous_offset.lerp(target_offset, min(t, 1))
-#	else:
-#		snap_follow_narm()
-#		status = Status.FOLLOWING_NARM
-#	offset = current_offset
-	
-func stop_following_narm():
-	global_anchor = global_position
-	top_level = true
-	global_position = global_anchor
-	
-func snap_follow_narm():
-	top_level = false
-	position = Vector2.ZERO
-	current_offset = Vector2.ZERO
-	offset = current_offset

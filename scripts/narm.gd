@@ -3,6 +3,7 @@ extends Node2D
 
 @onready var foot1 : RigidBody2D = $legsegment6
 @onready var foot2: RigidBody2D = $legsegment8
+@onready var camera: Camera2D = $narmbody/Camera
 
 signal narm_leg_grabbed(narm_leg: NarmLeg)
 signal narm_leg_released(narm_leg: NarmLeg)
@@ -11,6 +12,7 @@ signal narm_leg_released(narm_leg: NarmLeg)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	global_position = Vector2(500, 72)
+	camera.global_position = global_position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

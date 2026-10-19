@@ -12,10 +12,12 @@ enum Status {
 @export var pan_offset_y: float = 200
 # Defines how far the cursor must be from the edge of the screen to trigger panning
 @export var pan_zone_width: int = 100
+# Once we've panned, the zone defined earlier gets bigger, and only once we're out of that zone allow panning back
+@export var pan_return_zone_width: int = 200
+var previous_pan_direction: Vector2 = Vector2.ZERO
 
 # Arbitrary values that determines how fast the camera will lerp to a new position
 @export var lerp_delta = 2
-@export var tracking_lerp_delta = 10
 
 var narm_leg_grabbed: bool = false
 var status: Status = Status.TRACKING_NARM
@@ -47,7 +49,7 @@ func _process(delta: float) -> void:
 	# follow narm
 	if status == Status.TRACKING_NARM:
 		offset = lerp(offset, Vector2.ZERO, lerp_delta * delta)
-		var new_global_position = lerp(global_position, narm.global_position, tracking_lerp_delta * delta)
+		var new_global_position = lerp(global_position, narm.global_position, lerp_delta * delta)
 		global_position = new_global_position
 	
 	# do not move global position, only move offset	
@@ -69,16 +71,21 @@ func on_narm_release(narm_leg: NarmLeg):
 
 # todo could replace this with a circular hitbox, but this will do for now	
 func get_pan_direction(mouse_pos: Vector2) -> Vector2:
+	var zone_width = pan_zone_width
+	if previous_pan_direction != Vector2.ZERO:
+		zone_width = pan_return_zone_width
+	
 	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
 	var result: Vector2 = Vector2.ZERO
-	if mouse_pos.x < pan_zone_width:
+	if mouse_pos.x < zone_width:
 		result += Vector2(-1, 0)
-	elif mouse_pos.x > viewport_size.x - pan_zone_width:
+	elif mouse_pos.x > viewport_size.x - zone_width:
 		result += Vector2(1, 0)
-	if mouse_pos.y < pan_zone_width:
+	if mouse_pos.y < zone_width:
 		result += Vector2(0, -1)
-	elif mouse_pos.y > viewport_size.y - pan_zone_width:	
+	elif mouse_pos.y > viewport_size.y - zone_width:	
 		result += Vector2(0, 1)
 	
+	previous_pan_direction = result
 	return result
 	

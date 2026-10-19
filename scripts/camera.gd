@@ -5,15 +5,16 @@ extends Camera2D
 @export var max_offset_y: float = 200
 # Defines how far the cursor must be from the edge of the screen to trigger panning
 @export var pan_zone_width: int = 100
-@export var time_to_lerp: float = 1.0
-@export var delay_before_lerp: float = 1.0
-@export var lerp_delta = 2
+#@export var time_to_lerp: float = 1.0
+#@export var delay_before_lerp: float = 1.0
 
-enum PanStatus {
-	FOLLOWING_NARM,
-	PANNING,
-	STILL,
-	PANNING_BACK
+# Arbitrary value that determines how fast the camera will track the Narm
+@export var lerp_delta = 2
+@export var return_lerp_delta = 10
+
+enum Status {
+	TRACKING_NARM,
+	ANCHORED
 }
 
 var narm_leg_grabbed: bool = false
@@ -21,11 +22,11 @@ var current_offset: Vector2 = Vector2.ZERO
 var previous_offset: Vector2 = Vector2.ZERO
 var global_anchor: Vector2 = Vector2.ZERO
 var current_pan_direction: Vector2 = Vector2.ZERO
-var t: float         = 0.0
-var waiting_t: float = 0.0
+var t: float = 0.0
+#var waiting_t: float = 0.0
 @onready var narm: Node2D = get_parent()
 
-var pan_status: PanStatus = PanStatus.FOLLOWING_NARM
+var status: Status = Status.TRACKING_NARM
 	
 
 # Called when the node enters the scene tree for the first time.
@@ -36,17 +37,31 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	print("position: ", global_position)
+	print("offset: ", offset)
 	print("narm position:", narm.global_position)
+	print("status: ", status)
 	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
 	var new_pan_direction: Vector2 = get_pan_direction(mouse_pos)
 	
-	var wait_done = waiting_t >= delay_before_lerp
-	waiting_t += delta
+	# Check if we should now anchor - if narm leg grabbed or there is a pan direction
+	if narm_leg_grabbed or new_pan_direction != Vector2.ZERO:
+		global_anchor = global_position
+		status = Status.ANCHORED
+	else:
+		status = Status.TRACKING_NARM
+	
 	
 	# follow narm
-	var new_global_position = lerp(global_position, narm.global_position, lerp_delta * delta)
-	global_position = new_global_position
-#	print(distance_to_narm)
+	if status == Status.TRACKING_NARM:
+		offset = lerp(offset, Vector2.ZERO, lerp_delta * delta)
+		var new_global_position = lerp(global_position, narm.global_position, lerp_delta * delta)
+		global_position = new_global_position
+		
+	elif status == Status.ANCHORED:
+		global_position = global_anchor
+		var new_offset = lerp(offset, 
+		Vector2(new_pan_direction.x * max_offset_x, new_pan_direction.y * max_offset_y), lerp_delta * delta)
+		offset = new_offset
 			
 	
 		
@@ -74,26 +89,26 @@ func get_pan_direction(mouse_pos: Vector2) -> Vector2:
 	
 	return result
 	
-func pan_to(delta: float):
-	# if different pan direction, start lerping from current offset and reset both time counters
-	if t < 1.0:
-		t += delta / time_to_lerp
-		var to: Vector2 = Vector2(current_pan_direction.x * max_offset_x, current_pan_direction.y * max_offset_y)
-		current_offset = previous_offset.lerp(to, min(t, 1))
-	else:
-		pan_status = PanStatus.STILL
-	offset = current_offset
-	
-func pan_back_to_narm(delta: float):
-	var narm: Node2D = get_parent()
-	var target_offset: Vector2 = global_anchor - narm.global_position
-	if t < 1.0:
-		t += delta / time_to_lerp
-		current_offset = previous_offset.lerp(target_offset, min(t, 1))
-	else:
-		snap_follow_narm()
-		pan_status = PanStatus.FOLLOWING_NARM
-	offset = current_offset
+#func pan_to(delta: float):
+#	# if different pan direction, start lerping from current offset and reset both time counters
+#	if t < 1.0:
+#		t += delta / time_to_lerp
+#		var to: Vector2 = Vector2(current_pan_direction.x * max_offset_x, current_pan_direction.y * max_offset_y)
+#		current_offset = previous_offset.lerp(to, min(t, 1))
+#	else:
+#		status = Status.STILL
+#	offset = current_offset
+#	
+#func pan_back_to_narm(delta: float):
+#	var narm: Node2D = get_parent()
+#	var target_offset: Vector2 = global_anchor - narm.global_position
+#	if t < 1.0:
+#		t += delta / time_to_lerp
+#		current_offset = previous_offset.lerp(target_offset, min(t, 1))
+#	else:
+#		snap_follow_narm()
+#		status = Status.FOLLOWING_NARM
+#	offset = current_offset
 	
 func stop_following_narm():
 	global_anchor = global_position

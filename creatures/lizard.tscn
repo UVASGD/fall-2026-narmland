@@ -85,7 +85,7 @@ rotation = 0.89884454
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = 1.7075472e-06
+bone_angle = 1.7075471e-06
 
 [node name="Bone2D2" type="Bone2D" parent="Skeleton2D/Bone2D" unique_id=1459097824]
 position = Vector2(-22.574951, -14.504187)

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bgw0tsbn2ae06"]
+
+[ext_resource type="Texture2D" uid="uid://3hbd5h5m2nwd" path="res://assets/icon.svg" id="1_3agvj"]
+[ext_resource type="Script" uid="uid://b4hv4xrkcn0rr" path="res://creatures/frog.gd" id="1_y1mic"]
+[ext_resource type="Script" uid="uid://bds4v0tlnpxnj" path="res://creatures/joint_data.gd" id="2_y14s4"]
+
+[sub_resource type="Resource" id="Resource_hh0fu"]
+script = ExtResource("2_y14s4")
+body_index_2 = 1
+stiffness = 1000.0
+dampening = 30.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lwv56"]
+radius = 20.09975
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3agvj"]
+size = Vector2(21, 7)
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_y1mic"]
+
+[node name="Frog" type="Node2D" unique_id=1108721984 node_paths=PackedStringArray("bodies")]
+script = ExtResource("1_y1mic")
+bodies = [NodePath("Bodies/Torso"), NodePath("Bodies/Feet")]
+joint_data = Array[ExtResource("2_y14s4")]([SubResource("Resource_hh0fu")])
+
+[node name="Bodies" type="Node2D" parent="." unique_id=1168169662]
+
+[node name="Torso" type="RigidBody2D" parent="Bodies" unique_id=682794148]
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Bodies/Torso" unique_id=1994272114]
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_3agvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bodies/Torso" unique_id=2055122187]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_lwv56")
+disabled = true
+
+[node name="Feet" type="RigidBody2D" parent="Bodies" unique_id=232324347]
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Bodies/Feet" unique_id=412504970]
+position = Vector2(13, 71)
+scale = Vector2(0.8, 0.256)
+texture = ExtResource("1_3agvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bodies/Feet" unique_id=637700293]
+position = Vector2(14, 71)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_3agvj")
+
+[node name="Skeleton2D" type="Skeleton2D" parent="." unique_id=977106505]
+modification_stack = SubResource("SkeletonModificationStack2D_y1mic")
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D" unique_id=643833369]
+rotation = -0.34557518
+scale = Vector2(1.3000003, 1.3000003)
+rest = Transform2D(-5.6824803e-08, 1.3, -1.3, -5.6824803e-08, 0, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=1284400305]

@@ -2,6 +2,7 @@ extends Control
 
 @onready var hover_sound: AudioStreamPlayer = $HoverSound
 @onready var play_sound: AudioStreamPlayer = $PlaySound
+@onready var play_button: Button = $PanelContainer/VBoxContainer/VBoxContainer/PlayButton
 
 func _ready() -> void:
 	for button in $PanelContainer/VBoxContainer/VBoxContainer.get_children():
@@ -10,6 +11,7 @@ func _ready() -> void:
 			button.focus_entered.connect(hover_sound.play)
 
 func _on_play_button_pressed() -> void:
+	play_button.disabled = true
 	play_sound.play()
 	await play_sound.finished
 	get_tree().change_scene_to_file("res://scenes/node_2d.tscn")

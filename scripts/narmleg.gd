@@ -26,7 +26,7 @@ func _on_mouse_entered() -> void:
 	mouseEntered = true;
 	Global.mouseSelect = self
 	face.change_face("curious");
-
+	mass = 10
 	
 	
 
@@ -34,11 +34,10 @@ func _on_mouse_exited() -> void:
 	mouseEntered = false;
 	Global.mouseSelect = null
 	face.change_face("smile");
-
+	mass = 50
 
  # Replace with function body.
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	mouseEntered = false
 	mass = 1;

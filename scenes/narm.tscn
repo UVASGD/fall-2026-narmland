@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c37q4ff7wc7ij" path="res://assets/narmhead.png" id="3_wblsn"]
 [ext_resource type="PackedScene" uid="uid://bc4o1ir672qrc" path="res://scenes/face.tscn" id="4_ngeu0"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf2mx"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60jfq"]
 size = Vector2(33.5, 54)
 
@@ -169,7 +171,7 @@ node_b = NodePath("../legsegment8")
 modulate = Color(0, 1, 1, 1)
 position = Vector2(-328, 0)
 rotation = 1.54098
-mass = 1000.0
+mass = 100000.0
 
 [node name="PinJointFeet1" type="PinJoint2D" parent="." unique_id=623672131]
 position = Vector2(-379, 1)
@@ -182,6 +184,14 @@ offset_left = -19.4247
 offset_top = -19.5878
 offset_right = 20.5753
 offset_bottom = 20.4122
+
+[node name="Area2D" type="Area2D" parent="." unique_id=745028623]
+position = Vector2(4.9999695, 0.9999995)
+scale = Vector2(36.359997, 1.4)
+collision_layer = 5
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1995824595]
+shape = SubResource("RectangleShape2D_sf2mx")
 
 [node name="narmbody" type="RigidBody2D" parent="." unique_id=1002964366]
 position = Vector2(0, -20)

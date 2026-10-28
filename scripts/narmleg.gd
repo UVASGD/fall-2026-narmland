@@ -6,6 +6,7 @@ extends RigidBody2D
 
 var mouseEntered;
 var grabbed: bool = false
+var trapped: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,13 +18,14 @@ func _physics_process(_delta: float) -> void:
 		
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	if (Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) 
-	and mouseEntered and Global.mouseSelect == self):
-		global_position = get_global_mouse_position();
-		linear_velocity = Vector2.ZERO;
-		update_grabbed_state(true)
-	else:
-		update_grabbed_state(false)
+	if not trapped:
+		if (Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) 
+		and mouseEntered and Global.mouseSelect == self):
+			global_position = get_global_mouse_position();
+			linear_velocity = Vector2.ZERO;
+			update_grabbed_state(true)
+		else:
+			update_grabbed_state(false)
 				
 
 func update_grabbed_state(b: bool):

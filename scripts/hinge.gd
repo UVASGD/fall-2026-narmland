@@ -24,11 +24,13 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	if body.name.begins_with("legsegment8"):
 		var joint = active_narm.get_node_or_null("PinJointFeet1")
+		print("3. joint: ", joint, " | pinning to: ", get_parent().name, " (", get_parent().get_class(), ")")
 		if is_instance_valid(joint):
 			joint.global_position = global_position
 			joint.node_b = get_parent().get_path()	
 	elif body.name.begins_with("legsegment6"):
 		var joint = active_narm.get_node_or_null("PinJointFeet2")
+		print("3. joint: ", joint, " | pinning to: ", get_parent().name, " (", get_parent().get_class(), ")")
 		if is_instance_valid(joint):
 			joint.global_position = global_position
 			joint.node_b = get_parent().get_path()

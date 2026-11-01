@@ -55,17 +55,16 @@ func apply_burrow_buoyancy() -> void:
 	)
 	for bp in bodies:
 		if not check_bodypart_grounded(bp):
-			continue
+			return
+	for bp in bodies:
 		var upward_force := (
 			Vector2.UP
 			* bp.mass
 			* gravity
 		)
-		var downward_speed :float= max(bp.linear_velocity.y, 0.0)
 
 		var drag_force := (
-			Vector2.UP
-			* downward_speed
+			-bp.linear_velocity
 			* bp.mass
 			* burrow_drag
 		)
@@ -95,5 +94,6 @@ func launch_head() -> void:
 		return
 
 	head.apply_central_impulse(
-		direction * head.mass * launch_speed_boost
+		direction * head.mass * launch_speed_boost +
+		Vector2.UP * head.mass * 10
 	)

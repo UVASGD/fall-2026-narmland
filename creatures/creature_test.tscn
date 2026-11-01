@@ -430,13 +430,13 @@ shape = SubResource("RectangleShape2D_rhpbe")
 [node name="Lerm" parent="." unique_id=619675925 node_paths=PackedStringArray("target") instance=ExtResource("4_hpb6t")]
 position = Vector2(587, 713)
 target = NodePath("Target")
-burrow_thrust = 10000.0
-launch_speed_boost = 50.0
+burrow_thrust = 5000.0
+launch_speed_boost = 200.0
 recover_time = 3.0
 burrow_drag = 1.0
 
 [node name="Target" type="Node2D" parent="Lerm" unique_id=2091916396]
-position = Vector2(-8, -393)
+position = Vector2(-27, -574)
 
 [node name="Frog" parent="." unique_id=1108721984 instance=ExtResource("5_lr6pm")]
 position = Vector2(637, 362)

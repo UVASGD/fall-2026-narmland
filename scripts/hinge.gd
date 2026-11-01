@@ -25,9 +25,17 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	if body.held:
 		return
-	var joint : PinJoint2D = body.hinge_joint
-	joint.global_position = global_position
-	joint.node_b = get_parent().get_path()
+	
+	if body.name.begins_with("legsegment8"):
+		var joint = active_narm.get_node_or_null("PinJointFeet1")
+		if is_instance_valid(joint):
+			joint.global_position = global_position
+			joint.node_b = get_parent().get_path()	
+	elif body.name.begins_with("legsegment6"):
+		var joint = active_narm.get_node_or_null("PinJointFeet2")
+		if is_instance_valid(joint):
+			joint.global_position = global_position
+			joint.node_b = get_parent().get_path()
 
 func _on_body_exited(body: Node2D) -> void:
 	if not ("hinge_joint" in body) or body.hinge_joint == null:

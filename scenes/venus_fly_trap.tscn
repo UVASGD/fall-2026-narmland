@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b4qm71dla3hcl"]
+
+[ext_resource type="Script" uid="uid://babj5lqucbx46" path="res://scenes/venus_fly_trap.gd" id="1_hnmpv"]
+[ext_resource type="Texture2D" uid="uid://bqvffhtg1lco3" path="res://assets/hinge.png" id="2_onha5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lald"]
+
+[node name="VenusFlyTrap" type="StaticBody2D" unique_id=825286552]
+script = ExtResource("1_hnmpv")
+
+[node name="TriggerBox" type="Area2D" parent="." unique_id=382881044]
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerBox" unique_id=1435888690]
+shape = SubResource("RectangleShape2D_2lald")
+
+[node name="Sprite2D" type="Sprite2D" parent="TriggerBox" unique_id=1289625039]
+position = Vector2(7, 8)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("2_onha5")
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=135800897]
+process_callback = 0
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="TriggerBox" to="." method="_on_trigger_box_body_entered"]

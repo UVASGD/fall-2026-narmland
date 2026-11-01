@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://dupx77ga22s6h"]
 
 [ext_resource type="Script" uid="uid://6p2utkcx6qek" path="res://scripts/narmleg.gd" id="1_22trx"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://dhcrk05w1d7h4" path="res://assets/narm leg.png" id="2_6d1kp"]
-=======
->>>>>>> leg-changes
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_powc4"]
 
@@ -13,30 +9,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xe1v"]
 size = Vector2(4.5, 5.5)
 
-<<<<<<< HEAD
-[node name="legsegment" type="RigidBody2D" unique_id=1965973484]
-=======
 [node name="legsegment" type="RigidBody2D" unique_id=1720691562]
->>>>>>> leg-changes
 collision_layer = 4
 collision_mask = 3
 input_pickable = true
 angular_damp = 100.0
 script = ExtResource("1_22trx")
 
-<<<<<<< HEAD
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=769009820]
-shape = SubResource("CapsuleShape2D_lmg4a")
-
-[node name="MeshInstance2D" type="Sprite2D" parent="." unique_id=130462278]
-position = Vector2(1.81899e-12, -5.96046e-08)
-scale = Vector2(0.162109, 0.726562)
-texture = ExtResource("2_6d1kp")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=841893340]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=396891525]
-=======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1273822400]
 shape = SubResource("CircleShape2D_powc4")
 
@@ -49,7 +28,6 @@ mesh = SubResource("SphereMesh_uthrw")
 [node name="Area2D" type="Area2D" parent="." unique_id=1312649105]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=661194466]
->>>>>>> leg-changes
 shape = SubResource("RectangleShape2D_8xe1v")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

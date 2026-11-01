@@ -6,33 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://dmb7ic1n28kob" path="res://assets/background_01.png" id="2_y1i40"]
 [ext_resource type="Texture2D" uid="uid://dlgoi4yl7ie8c" path="res://assets/ground_01.png" id="3_huwmc"]
 [ext_resource type="PackedScene" uid="uid://k11rt806ythl" path="res://scenes/potato.tscn" id="3_oi35y"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-[ext_resource type="Script" uid="uid://dqqr0hyicoj45" path="res://scenes/floor_28.gd" id="4_svjui"]
-=======
 [ext_resource type="Script" uid="uid://dqqr0hyicoj45" path="res://scripts/floor_28.gd" id="4_svjui"]
->>>>>>> leg-changes
-=======
-[ext_resource type="Script" uid="uid://dqqr0hyicoj45" path="res://scenes/floor_28.gd" id="4_svjui"]
->>>>>>> origin/venus-fly-trap
 [ext_resource type="PackedScene" uid="uid://bjlgyy8dlqq3j" path="res://scenes/saw.tscn" id="7_jlbvi"]
 [ext_resource type="PackedScene" uid="uid://bgw0tsbn2ae06" path="res://creatures/frog.tscn" id="8_hh0fu"]
-=======
-[ext_resource type="Script" uid="uid://dh1gtcvq1w47u" path="res://scripts/floor_28.gd" id="4_svjui"]
-[ext_resource type="PackedScene" uid="uid://bjlgyy8dlqq3j" path="res://scenes/saw.tscn" id="7_jlbvi"]
-[ext_resource type="Script" uid="uid://cw6omjf6tafqo" path="res://scripts/pause_button.gd" id="8_hh0fu"]
->>>>>>> origin/pause-menu
+[ext_resource type="Script" uid="uid://cw6omjf6tafqo" path="res://scripts/pause_button.gd" id="9_pause"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eeygk"]
 size = Vector2(1175.04, 44.3295)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ngi"]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="level" type="Node2D" unique_id=171664973]
 script = ExtResource("1_3pif4")
 
@@ -41,39 +24,11 @@ z_index = 1
 position = Vector2(400, -300)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1007459999]
-=======
-[node name="level" type="Node2D" unique_id=2096835689]
-script = ExtResource("1_3pif4")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1019367718]
->>>>>>> origin/frog-creature
-=======
-[node name="level" type="Node2D" unique_id=983713710]
-script = ExtResource("1_3pif4")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=245616718]
->>>>>>> leg-changes
-=======
-[node name="level" type="Node2D" unique_id=1511617578]
-script = ExtResource("1_3pif4")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893323904]
->>>>>>> origin/pause-menu
-=======
-[node name="level" type="Node2D" unique_id=1951614985]
-script = ExtResource("1_3pif4")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2124829556]
->>>>>>> origin/venus-fly-trap
 modulate = Color(0.997739, 0.997807, 0.997807, 1)
 position = Vector2(1476, 624)
 scale = Vector2(1.41412, 1.589)
 texture = ExtResource("2_y1i40")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor" type="StaticBody2D" parent="." unique_id=650232835]
 position = Vector2(102, 568)
 scale = Vector2(0.2, 3.04)
@@ -83,120 +38,24 @@ position = Vector2(-1, 3)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor" unique_id=1933379854]
-=======
-[node name="floor" type="StaticBody2D" parent="." unique_id=1873433724]
-position = Vector2(102, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=75775310]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor" unique_id=1308119269]
->>>>>>> origin/frog-creature
-=======
-[node name="floor" type="StaticBody2D" parent="." unique_id=149388220]
-position = Vector2(102, 567)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=1678294193]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor" unique_id=2016932222]
->>>>>>> leg-changes
-=======
-[node name="floor" type="StaticBody2D" parent="." unique_id=1236125587]
-position = Vector2(102, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=846730344]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor" unique_id=1877745052]
->>>>>>> origin/pause-menu
-=======
-[node name="floor" type="StaticBody2D" parent="." unique_id=174090160]
-position = Vector2(102, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=1982903603]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor" unique_id=698592398]
->>>>>>> origin/venus-fly-trap
 position = Vector2(163, 0)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor8" type="StaticBody2D" parent="." unique_id=1440806589]
 position = Vector2(344, 568)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor8" unique_id=1353399603]
-=======
-[node name="floor8" type="StaticBody2D" parent="." unique_id=1904496313]
-position = Vector2(344, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor8" unique_id=37576837]
->>>>>>> origin/frog-creature
-=======
-[node name="floor8" type="StaticBody2D" parent="." unique_id=1541138296]
-position = Vector2(344, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor8" unique_id=388929907]
->>>>>>> leg-changes
-=======
-[node name="floor8" type="StaticBody2D" parent="." unique_id=239342821]
-position = Vector2(344, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor8" unique_id=2111769482]
->>>>>>> origin/pause-menu
-=======
-[node name="floor8" type="StaticBody2D" parent="." unique_id=354693770]
-position = Vector2(344, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor8" unique_id=537276220]
->>>>>>> origin/venus-fly-trap
 position = Vector2(6.10352e-05, 1.90735e-06)
 scale = Vector2(1, 1.25)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor8" unique_id=578796397]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor8" unique_id=831960027]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor8" unique_id=1979801305]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor8" unique_id=544604022]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor8" unique_id=1956009755]
->>>>>>> origin/venus-fly-trap
 position = Vector2(163, 0)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor15" type="StaticBody2D" parent="." unique_id=1807270793]
 position = Vector2(1572, 594)
 scale = Vector2(0.2, 3.04)
@@ -206,58 +65,10 @@ position = Vector2(-1, 3)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor15" unique_id=1954673676]
-=======
-[node name="floor15" type="StaticBody2D" parent="." unique_id=1591432621]
-position = Vector2(1572, 594)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor15" unique_id=600251842]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor15" unique_id=2111686903]
->>>>>>> origin/frog-creature
-=======
-[node name="floor15" type="StaticBody2D" parent="." unique_id=1463730881]
-position = Vector2(1572, 594)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor15" unique_id=665387790]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor15" unique_id=2072728096]
->>>>>>> leg-changes
-=======
-[node name="floor15" type="StaticBody2D" parent="." unique_id=510947862]
-position = Vector2(1572, 594)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor15" unique_id=396591898]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor15" unique_id=1352609968]
->>>>>>> origin/pause-menu
-=======
-[node name="floor15" type="StaticBody2D" parent="." unique_id=911532731]
-position = Vector2(1572, 594)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor15" unique_id=1329989197]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor15" unique_id=1746644788]
->>>>>>> origin/venus-fly-trap
 position = Vector2(163, 0)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor16" type="StaticBody2D" parent="." unique_id=499063572]
 position = Vector2(1813, 595)
 scale = Vector2(0.2, 3.04)
@@ -267,203 +78,38 @@ position = Vector2(-1, 3)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor16" unique_id=2087060588]
-=======
-[node name="floor16" type="StaticBody2D" parent="." unique_id=975895581]
-position = Vector2(1813, 595)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor16" unique_id=221435845]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor16" unique_id=684614798]
->>>>>>> origin/frog-creature
-=======
-[node name="floor16" type="StaticBody2D" parent="." unique_id=1458837910]
-position = Vector2(1813, 595)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor16" unique_id=945992794]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor16" unique_id=319685376]
->>>>>>> leg-changes
-=======
-[node name="floor16" type="StaticBody2D" parent="." unique_id=1804920868]
-position = Vector2(1813, 595)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor16" unique_id=1818473587]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor16" unique_id=2123543372]
->>>>>>> origin/pause-menu
-=======
-[node name="floor16" type="StaticBody2D" parent="." unique_id=1602734014]
-position = Vector2(1813, 595)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor16" unique_id=866563158]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor16" unique_id=578437143]
->>>>>>> origin/venus-fly-trap
 position = Vector2(163, 0)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor9" type="StaticBody2D" parent="." unique_id=460173066]
 position = Vector2(584, 568)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor9" unique_id=2067834750]
-=======
-[node name="floor9" type="StaticBody2D" parent="." unique_id=1634753272]
-position = Vector2(584, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor9" unique_id=1617363217]
->>>>>>> origin/frog-creature
-=======
-[node name="floor9" type="StaticBody2D" parent="." unique_id=344937578]
-position = Vector2(584, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor9" unique_id=787572162]
->>>>>>> leg-changes
-=======
-[node name="floor9" type="StaticBody2D" parent="." unique_id=390288050]
-position = Vector2(584, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor9" unique_id=957134037]
->>>>>>> origin/pause-menu
-=======
-[node name="floor9" type="StaticBody2D" parent="." unique_id=659708263]
-position = Vector2(584, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor9" unique_id=1716069455]
->>>>>>> origin/venus-fly-trap
 position = Vector2(10.0001, -0.328946)
 scale = Vector2(1, 1.26316)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor9" unique_id=2135623751]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor9" unique_id=2093690382]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor9" unique_id=1929743032]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor9" unique_id=1594874133]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor9" unique_id=878177292]
->>>>>>> origin/venus-fly-trap
 position = Vector2(163, 0)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor10" type="StaticBody2D" parent="." unique_id=1191589624]
 position = Vector2(824, 568)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor10" unique_id=1918633339]
-=======
-[node name="floor10" type="StaticBody2D" parent="." unique_id=1834639680]
-position = Vector2(824, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor10" unique_id=1870109623]
->>>>>>> origin/frog-creature
-=======
-[node name="floor10" type="StaticBody2D" parent="." unique_id=623061625]
-position = Vector2(824, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor10" unique_id=327849285]
->>>>>>> leg-changes
-=======
-[node name="floor10" type="StaticBody2D" parent="." unique_id=1469159058]
-position = Vector2(824, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor10" unique_id=1956726293]
->>>>>>> origin/pause-menu
-=======
-[node name="floor10" type="StaticBody2D" parent="." unique_id=1520407714]
-position = Vector2(824, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor10" unique_id=1714744113]
->>>>>>> origin/venus-fly-trap
 position = Vector2(6.10352e-05, -0.328946)
 scale = Vector2(1, 1.27632)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor10" unique_id=154621371]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor10" unique_id=173449286]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor10" unique_id=1582945970]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor10" unique_id=14137101]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor10" unique_id=557224424]
->>>>>>> origin/venus-fly-trap
 position = Vector2(163, 0)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-[node name="floor11" type="StaticBody2D" parent="." unique_id=1941452118]
-position = Vector2(1046, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor11" unique_id=867868034]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor11" unique_id=1733339060]
-=======
-[node name="floor11" type="StaticBody2D" parent="." unique_id=1700860270]
-position = Vector2(1046, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor11" unique_id=1794609923]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor11" unique_id=816225675]
->>>>>>> origin/frog-creature
-=======
 [node name="floor11" type="StaticBody2D" parent="." unique_id=1202150136]
 position = Vector2(1046, 568)
 scale = Vector2(0.2, 3.04)
@@ -474,660 +120,153 @@ scale = Vector2(1, 1.2374107)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor11" unique_id=970348403]
->>>>>>> leg-changes
-=======
-[node name="floor11" type="StaticBody2D" parent="." unique_id=293592919]
-position = Vector2(1046, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor11" unique_id=605727178]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor11" unique_id=1946927223]
->>>>>>> origin/pause-menu
-=======
-[node name="floor11" type="StaticBody2D" parent="." unique_id=708242600]
-position = Vector2(1046, 568)
-scale = Vector2(0.2, 3.04)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor11" unique_id=1363908928]
-position = Vector2(-1, 3)
-shape = SubResource("RectangleShape2D_eeygk")
-
-[node name="ColorRect" type="Sprite2D" parent="floor11" unique_id=2033740318]
->>>>>>> origin/venus-fly-trap
 position = Vector2(163, 0)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor2" type="StaticBody2D" parent="." unique_id=954384941]
 position = Vector2(70, 410)
 scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor2" unique_id=1032094994]
-=======
-[node name="floor2" type="StaticBody2D" parent="." unique_id=1825841116]
-position = Vector2(70, 410)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2" unique_id=256352062]
->>>>>>> origin/frog-creature
-=======
-[node name="floor2" type="StaticBody2D" parent="." unique_id=1294977408]
-position = Vector2(70, 410)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2" unique_id=1752441611]
->>>>>>> leg-changes
-=======
-[node name="floor2" type="StaticBody2D" parent="." unique_id=834276669]
-position = Vector2(70, 410)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2" unique_id=904799424]
->>>>>>> origin/pause-menu
-=======
-[node name="floor2" type="StaticBody2D" parent="." unique_id=175110885]
-position = Vector2(70, 410)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2" unique_id=1965377631]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, 7.87671)
 scale = Vector2(1.33333, 1.21644)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor2" unique_id=140450706]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor2" unique_id=767711061]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor2" unique_id=48740335]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor2" unique_id=631421462]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor2" unique_id=1985763584]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor12" type="StaticBody2D" parent="." unique_id=1982483312]
 position = Vector2(70, 232)
 scale = Vector2(0.12, 2.56)
 
 [node name="ColorRect" type="Sprite2D" parent="floor12" unique_id=984014289]
-=======
-[node name="floor12" type="StaticBody2D" parent="." unique_id=937806826]
-position = Vector2(70, 232)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor12" unique_id=1258533185]
->>>>>>> origin/frog-creature
-=======
-[node name="floor12" type="StaticBody2D" parent="." unique_id=1560679296]
-position = Vector2(70, 232)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor12" unique_id=2086136893]
->>>>>>> leg-changes
-=======
-[node name="floor12" type="StaticBody2D" parent="." unique_id=1275085739]
-position = Vector2(70, 232)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor12" unique_id=1431220605]
->>>>>>> origin/pause-menu
-=======
-[node name="floor12" type="StaticBody2D" parent="." unique_id=696236305]
-position = Vector2(70, 232)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor12" unique_id=773496670]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor12" unique_id=2112017908]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor12" unique_id=1602376727]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor12" unique_id=1986212271]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor12" unique_id=1782437839]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor12" unique_id=478418]
->>>>>>> origin/venus-fly-trap
 position = Vector2(91.6667, 7.81249)
 scale = Vector2(1.34077, 2.04456)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor13" type="StaticBody2D" parent="." unique_id=1314282776]
 position = Vector2(70, 53)
 scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor13" unique_id=1516589575]
-=======
-[node name="floor13" type="StaticBody2D" parent="." unique_id=240154023]
-position = Vector2(70, 53)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor13" unique_id=1366626895]
->>>>>>> origin/frog-creature
-=======
-[node name="floor13" type="StaticBody2D" parent="." unique_id=1715275346]
-position = Vector2(70, 53)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor13" unique_id=88908813]
->>>>>>> leg-changes
-=======
-[node name="floor13" type="StaticBody2D" parent="." unique_id=1723423615]
-position = Vector2(70, 53)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor13" unique_id=1178224123]
->>>>>>> origin/pause-menu
-=======
-[node name="floor13" type="StaticBody2D" parent="." unique_id=2057137222]
-position = Vector2(70, 53)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor13" unique_id=1630178637]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, 7.87671)
 scale = Vector2(1, 1.21644)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor13" unique_id=1314696795]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor13" unique_id=82424634]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor13" unique_id=578022036]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor13" unique_id=1832076650]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor13" unique_id=1796641104]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor17" type="StaticBody2D" parent="." unique_id=805101557]
 position = Vector2(261, 11)
 scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor17" unique_id=359454743]
-=======
-[node name="floor17" type="StaticBody2D" parent="." unique_id=603252855]
-position = Vector2(261, 11)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor17" unique_id=1053084297]
->>>>>>> origin/frog-creature
-=======
-[node name="floor17" type="StaticBody2D" parent="." unique_id=850802971]
-position = Vector2(261, 11)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor17" unique_id=2018990015]
->>>>>>> leg-changes
-=======
-[node name="floor17" type="StaticBody2D" parent="." unique_id=366452363]
-position = Vector2(261, 11)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor17" unique_id=70851951]
->>>>>>> origin/pause-menu
-=======
-[node name="floor17" type="StaticBody2D" parent="." unique_id=701270926]
-position = Vector2(261, 11)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor17" unique_id=2089059609]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, 7.87671)
 scale = Vector2(1, 1.21644)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor17" unique_id=582235610]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor17" unique_id=1380513129]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor17" unique_id=1651723332]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor17" unique_id=1180328219]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor17" unique_id=478868939]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor18" type="StaticBody2D" parent="." unique_id=138045363]
 position = Vector2(329, 9)
 scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor18" unique_id=466628144]
-=======
-[node name="floor18" type="StaticBody2D" parent="." unique_id=728223740]
-position = Vector2(329, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor18" unique_id=1861756218]
->>>>>>> origin/frog-creature
-=======
-[node name="floor18" type="StaticBody2D" parent="." unique_id=1704832971]
-position = Vector2(329, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor18" unique_id=13800622]
->>>>>>> leg-changes
-=======
-[node name="floor18" type="StaticBody2D" parent="." unique_id=1971859892]
-position = Vector2(329, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor18" unique_id=116938262]
->>>>>>> origin/pause-menu
-=======
-[node name="floor18" type="StaticBody2D" parent="." unique_id=175746192]
-position = Vector2(329, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor18" unique_id=152565984]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, -2.34375)
 scale = Vector2(1.33332, 1.49769)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor18" unique_id=55890445]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor18" unique_id=1151260979]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor18" unique_id=1420838742]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor18" unique_id=1789370773]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor18" unique_id=773665435]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor19" type="StaticBody2D" parent="." unique_id=1825850236]
 position = Vector2(824, 9)
 scale = Vector2(0.2, 2.56)
 
 [node name="ColorRect" type="Sprite2D" parent="floor19" unique_id=1239579302]
-=======
-[node name="floor19" type="StaticBody2D" parent="." unique_id=2045041644]
-position = Vector2(824, 9)
-scale = Vector2(0.2, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor19" unique_id=334292154]
->>>>>>> origin/frog-creature
-=======
-[node name="floor19" type="StaticBody2D" parent="." unique_id=1051497618]
-position = Vector2(824, 9)
-scale = Vector2(0.2, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor19" unique_id=2087212255]
->>>>>>> leg-changes
-=======
-[node name="floor19" type="StaticBody2D" parent="." unique_id=1580933581]
-position = Vector2(824, 9)
-scale = Vector2(0.2, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor19" unique_id=471926583]
->>>>>>> origin/pause-menu
-=======
-[node name="floor19" type="StaticBody2D" parent="." unique_id=266854844]
-position = Vector2(824, 9)
-scale = Vector2(0.2, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor19" unique_id=235426354]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 8.20312)
 scale = Vector2(5.98877, 0.319067)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor19" unique_id=1034768868]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor19" unique_id=714919481]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor19" unique_id=1698211199]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor19" unique_id=1785799938]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor19" unique_id=1042871497]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6665, 7.87671)
 scale = Vector2(1, 1.40394)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor20" type="StaticBody2D" parent="." unique_id=1051869588]
 position = Vector2(1028, 9)
 scale = Vector2(0.12, 2.56)
 
 [node name="ColorRect" type="Sprite2D" parent="floor20" unique_id=1590712399]
-=======
-[node name="floor20" type="StaticBody2D" parent="." unique_id=1945026877]
-position = Vector2(1028, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor20" unique_id=157640800]
->>>>>>> origin/frog-creature
-=======
-[node name="floor20" type="StaticBody2D" parent="." unique_id=488136479]
-position = Vector2(1028, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor20" unique_id=1731036203]
->>>>>>> leg-changes
-=======
-[node name="floor20" type="StaticBody2D" parent="." unique_id=1776766225]
-position = Vector2(1028, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor20" unique_id=182800836]
->>>>>>> origin/pause-menu
-=======
-[node name="floor20" type="StaticBody2D" parent="." unique_id=1988809214]
-position = Vector2(1028, 9)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor20" unique_id=2045651236]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor20" unique_id=882989621]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor20" unique_id=1135259739]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor20" unique_id=1070454916]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor20" unique_id=1988605424]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor20" unique_id=832849772]
->>>>>>> origin/venus-fly-trap
 position = Vector2(50.0003, -0.78125)
 scale = Vector2(1.66665, 1.70081)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor21" type="StaticBody2D" parent="." unique_id=184682960]
 position = Vector2(1226, 17)
 scale = Vector2(0.12, 2.56)
 
 [node name="ColorRect" type="Sprite2D" parent="floor21" unique_id=417509400]
-=======
-[node name="floor21" type="StaticBody2D" parent="." unique_id=168327364]
-position = Vector2(1226, 17)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor21" unique_id=421169924]
->>>>>>> origin/frog-creature
-=======
-[node name="floor21" type="StaticBody2D" parent="." unique_id=1840829730]
-position = Vector2(1226, 17)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor21" unique_id=570885973]
->>>>>>> leg-changes
-=======
-[node name="floor21" type="StaticBody2D" parent="." unique_id=631430767]
-position = Vector2(1226, 17)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor21" unique_id=295208541]
->>>>>>> origin/pause-menu
-=======
-[node name="floor21" type="StaticBody2D" parent="." unique_id=1182808977]
-position = Vector2(1226, 17)
-scale = Vector2(0.12, 2.56)
-
-[node name="ColorRect" type="Sprite2D" parent="floor21" unique_id=838158623]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor21" unique_id=792518393]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor21" unique_id=677913080]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor21" unique_id=1930635362]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor21" unique_id=1433510587]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor21" unique_id=266138251]
->>>>>>> origin/venus-fly-trap
 position = Vector2(-8.33301, -1.95312)
 scale = Vector2(1.40165, 1.70346)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor27" type="StaticBody2D" parent="." unique_id=838754335]
 position = Vector2(2065, 354)
 scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor27" unique_id=1641264694]
-=======
-[node name="floor27" type="StaticBody2D" parent="." unique_id=785135015]
-position = Vector2(2065, 354)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor27" unique_id=1066690579]
->>>>>>> origin/frog-creature
-=======
-[node name="floor27" type="StaticBody2D" parent="." unique_id=408885492]
-position = Vector2(2065, 354)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor27" unique_id=578297746]
->>>>>>> leg-changes
-=======
-[node name="floor27" type="StaticBody2D" parent="." unique_id=1082521277]
-position = Vector2(2065, 354)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor27" unique_id=690649063]
->>>>>>> origin/pause-menu
-=======
-[node name="floor27" type="StaticBody2D" parent="." unique_id=1304898633]
-position = Vector2(2065, 354)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor27" unique_id=1847710987]
->>>>>>> origin/venus-fly-trap
 position = Vector2(-8.33331, -1.95312)
 scale = Vector2(1.40165, 1.70346)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor27" unique_id=998104243]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor27" unique_id=1552077724]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor27" unique_id=1846270527]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor27" unique_id=849285342]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor27" unique_id=2101774897]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="brokenWall" type="StaticBody2D" parent="." unique_id=2125291404]
-=======
-[node name="brokenWall" type="StaticBody2D" parent="." unique_id=677871971]
->>>>>>> origin/frog-creature
-=======
-[node name="brokenWall" type="StaticBody2D" parent="." unique_id=986098236]
->>>>>>> leg-changes
-=======
-[node name="brokenWall" type="StaticBody2D" parent="." unique_id=1175360485]
->>>>>>> origin/pause-menu
-=======
-[node name="brokenWall" type="StaticBody2D" parent="." unique_id=27709470]
->>>>>>> origin/venus-fly-trap
 position = Vector2(2164, 50)
 scale = Vector2(0.12, 6.36)
 script = ExtResource("4_svjui")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall" unique_id=1934767224]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall" unique_id=2078187607]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall" unique_id=1821859151]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall" unique_id=1580529602]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall" unique_id=1774736753]
->>>>>>> origin/venus-fly-trap
 position = Vector2(-8.33331, -1.95312)
 scale = Vector2(1.40165, 1.70346)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="brokenWall" unique_id=351585525]
-=======
-[node name="ColorRect" type="Sprite2D" parent="brokenWall" unique_id=73291692]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="brokenWall" unique_id=497780935]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="brokenWall" unique_id=1879490574]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="brokenWall" unique_id=1546753925]
->>>>>>> origin/venus-fly-trap
 modulate = Color(0.956863, 0.27451, 1, 1)
 self_modulate = Color(0.937682, 1, 0.999318, 1)
 position = Vector2(225, -1.17187)
 scale = Vector2(7.98879, 0.383747)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="Area2D" type="Area2D" parent="brokenWall" unique_id=1547664053]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall/Area2D" unique_id=260850965]
@@ -1139,525 +278,117 @@ position = Vector2(1069, 218)
 scale = Vector2(0.12, 3.2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor22" unique_id=119157946]
-=======
-[node name="Area2D" type="Area2D" parent="brokenWall" unique_id=467057376]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall/Area2D" unique_id=414410670]
-scale = Vector2(106.799, 4.04331)
-shape = SubResource("RectangleShape2D_q2ngi")
-
-[node name="floor22" type="StaticBody2D" parent="." unique_id=456097345]
-position = Vector2(1069, 218)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor22" unique_id=1609058055]
->>>>>>> origin/frog-creature
-=======
-[node name="Area2D" type="Area2D" parent="brokenWall" unique_id=728877559]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall/Area2D" unique_id=1131700650]
-scale = Vector2(106.799, 4.04331)
-shape = SubResource("RectangleShape2D_q2ngi")
-
-[node name="floor22" type="StaticBody2D" parent="." unique_id=1750045682]
-position = Vector2(1069, 218)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor22" unique_id=1742197659]
->>>>>>> leg-changes
-=======
-[node name="Area2D" type="Area2D" parent="brokenWall" unique_id=1389486026]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall/Area2D" unique_id=1728390422]
-scale = Vector2(106.799, 4.04331)
-shape = SubResource("RectangleShape2D_q2ngi")
-
-[node name="floor22" type="StaticBody2D" parent="." unique_id=414227401]
-position = Vector2(1069, 218)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor22" unique_id=1824945654]
->>>>>>> origin/pause-menu
-=======
-[node name="Area2D" type="Area2D" parent="brokenWall" unique_id=532671334]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="brokenWall/Area2D" unique_id=64838064]
-scale = Vector2(106.799, 4.04331)
-shape = SubResource("RectangleShape2D_q2ngi")
-
-[node name="floor22" type="StaticBody2D" parent="." unique_id=378216071]
-position = Vector2(1069, 218)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor22" unique_id=1313459447]
->>>>>>> origin/venus-fly-trap
 position = Vector2(-25, 4.17233e-07)
 scale = Vector2(1.33333, 1.61644)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor22" unique_id=967909043]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor22" unique_id=687992035]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor22" unique_id=755924901]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor22" unique_id=1135866450]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor22" unique_id=401514102]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor24" type="StaticBody2D" parent="." unique_id=698758453]
 position = Vector2(1073, -87)
 scale = Vector2(0.12, 3.2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor24" unique_id=917034388]
-=======
-[node name="floor24" type="StaticBody2D" parent="." unique_id=162829736]
-position = Vector2(1073, -87)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor24" unique_id=1573227209]
->>>>>>> origin/frog-creature
-=======
-[node name="floor24" type="StaticBody2D" parent="." unique_id=1924393980]
-position = Vector2(1073, -87)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor24" unique_id=1872246586]
->>>>>>> leg-changes
-=======
-[node name="floor24" type="StaticBody2D" parent="." unique_id=1000431224]
-position = Vector2(1073, -87)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor24" unique_id=801775149]
->>>>>>> origin/pause-menu
-=======
-[node name="floor24" type="StaticBody2D" parent="." unique_id=445552834]
-position = Vector2(1073, -87)
-scale = Vector2(0.12, 3.2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor24" unique_id=1350501133]
->>>>>>> origin/venus-fly-trap
 position = Vector2(2.67029e-05, -1.875)
 scale = Vector2(1.33333, 1.67894)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor24" unique_id=1890241922]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor24" unique_id=1086733890]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor24" unique_id=1351393508]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor24" unique_id=651785682]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor24" unique_id=1866378044]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor25" type="StaticBody2D" parent="." unique_id=724138766]
-=======
-[node name="floor25" type="StaticBody2D" parent="." unique_id=742933285]
->>>>>>> origin/frog-creature
-=======
-[node name="floor25" type="StaticBody2D" parent="." unique_id=1306659576]
->>>>>>> leg-changes
-=======
-[node name="floor25" type="StaticBody2D" parent="." unique_id=1881888201]
->>>>>>> origin/pause-menu
-=======
-[node name="floor25" type="StaticBody2D" parent="." unique_id=861629208]
->>>>>>> origin/venus-fly-trap
 position = Vector2(154, -72)
 rotation = 0.481433
 scale = Vector2(0.12, 3.2)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor25" unique_id=182206756]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor25" unique_id=1083053759]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor25" unique_id=429804356]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor25" unique_id=375317061]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor25" unique_id=32470314]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, 7.87671)
 scale = Vector2(1, 1.21644)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor25" unique_id=841339285]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor25" unique_id=812571290]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor25" unique_id=795245834]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor25" unique_id=1197349347]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor25" unique_id=656630843]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor28" type="StaticBody2D" parent="." unique_id=1884197316]
-=======
-[node name="floor28" type="StaticBody2D" parent="." unique_id=1622316232]
->>>>>>> origin/frog-creature
-=======
-[node name="floor28" type="StaticBody2D" parent="." unique_id=577028821]
->>>>>>> leg-changes
-=======
-[node name="floor28" type="StaticBody2D" parent="." unique_id=675319155]
->>>>>>> origin/pause-menu
-=======
-[node name="floor28" type="StaticBody2D" parent="." unique_id=559027230]
->>>>>>> origin/venus-fly-trap
 position = Vector2(1192, -46)
 rotation = 0.481433
 scale = Vector2(0.12, 3.2)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor28" unique_id=1261718039]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor28" unique_id=1949828845]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor28" unique_id=1426291392]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor28" unique_id=1753833278]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor28" unique_id=584989477]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor28" unique_id=32843922]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor28" unique_id=855395175]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor28" unique_id=305881390]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor28" unique_id=1870632898]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor28" unique_id=649283451]
->>>>>>> origin/venus-fly-trap
 position = Vector2(0.000190735, -7.15256e-07)
 scale = Vector2(1.29549, 1.80133)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor29" type="StaticBody2D" parent="." unique_id=153650266]
-=======
-[node name="floor29" type="StaticBody2D" parent="." unique_id=929740017]
->>>>>>> origin/frog-creature
-=======
-[node name="floor29" type="StaticBody2D" parent="." unique_id=313964548]
->>>>>>> leg-changes
-=======
-[node name="floor29" type="StaticBody2D" parent="." unique_id=154462652]
->>>>>>> origin/pause-menu
-=======
-[node name="floor29" type="StaticBody2D" parent="." unique_id=1296616295]
->>>>>>> origin/venus-fly-trap
 position = Vector2(1031, -14)
 rotation = -0.760213
 scale = Vector2(0.12, 3.2)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor29" unique_id=1272262702]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor29" unique_id=1735005428]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor29" unique_id=1979028610]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor29" unique_id=931440045]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor29" unique_id=1379868182]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor29" unique_id=640811457]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor29" unique_id=2068850756]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor29" unique_id=1945369230]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor29" unique_id=558028747]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor29" unique_id=651070270]
->>>>>>> origin/venus-fly-trap
 position = Vector2(0.000190735, -7.15256e-07)
 scale = Vector2(1.29549, 1.80133)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor26" type="StaticBody2D" parent="." unique_id=1939757510]
-=======
-[node name="floor26" type="StaticBody2D" parent="." unique_id=441695597]
->>>>>>> origin/frog-creature
-=======
-[node name="floor26" type="StaticBody2D" parent="." unique_id=536766340]
->>>>>>> leg-changes
-=======
-[node name="floor26" type="StaticBody2D" parent="." unique_id=7745136]
->>>>>>> origin/pause-menu
-=======
-[node name="floor26" type="StaticBody2D" parent="." unique_id=1447547803]
->>>>>>> origin/venus-fly-trap
 position = Vector2(313, -6.99999)
 rotation = 0.481433
 scale = Vector2(0.12, 2.37026)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor26" unique_id=510605598]
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor26" unique_id=2104587685]
->>>>>>> origin/frog-creature
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor26" unique_id=398840277]
->>>>>>> leg-changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor26" unique_id=169403779]
->>>>>>> origin/pause-menu
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor26" unique_id=81858365]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, 7.87671)
 scale = Vector2(1, 1.21644)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor26" unique_id=1142692342]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor26" unique_id=1781848712]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor26" unique_id=1380586608]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor26" unique_id=1353776657]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor26" unique_id=1255299433]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor23" type="StaticBody2D" parent="." unique_id=169952609]
 position = Vector2(1073, 400)
 scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor23" unique_id=1382730750]
-=======
-[node name="floor23" type="StaticBody2D" parent="." unique_id=1362376216]
-position = Vector2(1073, 400)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor23" unique_id=1378717242]
->>>>>>> origin/frog-creature
-=======
-[node name="floor23" type="StaticBody2D" parent="." unique_id=277049739]
-position = Vector2(1073, 400)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor23" unique_id=1296696417]
->>>>>>> leg-changes
-=======
-[node name="floor23" type="StaticBody2D" parent="." unique_id=1262005179]
-position = Vector2(1073, 400)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor23" unique_id=1283968632]
->>>>>>> origin/pause-menu
-=======
-[node name="floor23" type="StaticBody2D" parent="." unique_id=147956462]
-position = Vector2(1073, 400)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor23" unique_id=1414440867]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, 7.87671)
 scale = Vector2(1.666626, 2.0191221)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor23" unique_id=2077570171]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor23" unique_id=951165713]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor23" unique_id=1175503607]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor23" unique_id=398912954]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor23" unique_id=21165187]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="floor14" type="StaticBody2D" parent="." unique_id=1745379831]
 position = Vector2(67, -120)
 scale = Vector2(0.12, 2.56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor14" unique_id=671470891]
-=======
-[node name="floor14" type="StaticBody2D" parent="." unique_id=906421998]
-position = Vector2(67, -120)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor14" unique_id=1039130367]
->>>>>>> origin/frog-creature
-=======
-[node name="floor14" type="StaticBody2D" parent="." unique_id=325168077]
-position = Vector2(67, -120)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor14" unique_id=1875263893]
->>>>>>> leg-changes
-=======
-[node name="floor14" type="StaticBody2D" parent="." unique_id=388695005]
-position = Vector2(67, -120)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor14" unique_id=444659934]
->>>>>>> origin/pause-menu
-=======
-[node name="floor14" type="StaticBody2D" parent="." unique_id=447243849]
-position = Vector2(67, -120)
-scale = Vector2(0.12, 2.56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor14" unique_id=146888698]
->>>>>>> origin/venus-fly-trap
 position = Vector2(41.6667, 7.87671)
 scale = Vector2(1, 1.21644)
 shape = SubResource("RectangleShape2D_eeygk")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="ColorRect" type="Sprite2D" parent="floor14" unique_id=660363589]
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor14" unique_id=778685286]
->>>>>>> origin/frog-creature
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor14" unique_id=2056434179]
->>>>>>> leg-changes
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor14" unique_id=1787893684]
->>>>>>> origin/pause-menu
-=======
-[node name="ColorRect" type="Sprite2D" parent="floor14" unique_id=509902277]
->>>>>>> origin/venus-fly-trap
 position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("3_huwmc")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="hinge" parent="." unique_id=1601068469 instance=ExtResource("2_g4yos")]
 position = Vector2(438, 57)
 
@@ -1709,226 +440,10 @@ position = Vector2(188, -281)
 mass = 0.1
 
 [node name="saw" parent="." unique_id=1685762825 instance=ExtResource("7_jlbvi")]
-=======
-[node name="hinge" parent="." unique_id=298930885 instance=ExtResource("2_g4yos")]
-position = Vector2(438, 57)
-
-[node name="hinge5" parent="." unique_id=390953316 instance=ExtResource("2_g4yos")]
-position = Vector2(912, 119)
-
-[node name="hinge6" parent="." unique_id=1751534174 instance=ExtResource("2_g4yos")]
-position = Vector2(241, 117)
-
-[node name="hinge4" parent="." unique_id=1942509098 instance=ExtResource("2_g4yos")]
-position = Vector2(686, -17)
-
-[node name="hinge14" parent="." unique_id=1379924554 instance=ExtResource("2_g4yos")]
-position = Vector2(891, -82)
-
-[node name="hinge15" parent="." unique_id=1002384917 instance=ExtResource("2_g4yos")]
-position = Vector2(260, -171)
-
-[node name="hinge7" parent="." unique_id=2094481599 instance=ExtResource("2_g4yos")]
-position = Vector2(1339, -30)
-
-[node name="hinge8" parent="." unique_id=1343145829 instance=ExtResource("2_g4yos")]
-position = Vector2(1240, 123)
-
-[node name="hinge9" parent="." unique_id=2106104423 instance=ExtResource("2_g4yos")]
-position = Vector2(1168, 495)
-
-[node name="hinge3" parent="." unique_id=320705955 instance=ExtResource("2_g4yos")]
-position = Vector2(513, 490)
-scale = Vector2(1.02097, 2.58917)
-
-[node name="hinge2" parent="." unique_id=776506190 instance=ExtResource("2_g4yos")]
-position = Vector2(184, 312)
-
-[node name="hinge10" parent="." unique_id=844616626 instance=ExtResource("2_g4yos")]
-position = Vector2(1012, 666)
-
-[node name="hinge11" parent="." unique_id=68092674 instance=ExtResource("2_g4yos")]
-position = Vector2(527, 666)
-
-[node name="hinge12" parent="." unique_id=566437788 instance=ExtResource("2_g4yos")]
-position = Vector2(88.0001, 666)
-
-[node name="hinge13" parent="." unique_id=218701624 instance=ExtResource("2_g4yos")]
-position = Vector2(1953, 241)
-
-[node name="potato" parent="." unique_id=285164473 instance=ExtResource("3_oi35y")]
-position = Vector2(188, -281)
-mass = 0.1
-
-[node name="saw" parent="." unique_id=1182834036 instance=ExtResource("7_jlbvi")]
->>>>>>> origin/frog-creature
-=======
-[node name="hinge" parent="." unique_id=1439087304 instance=ExtResource("2_g4yos")]
-position = Vector2(438, 57)
-
-[node name="hinge5" parent="." unique_id=1650067984 instance=ExtResource("2_g4yos")]
-position = Vector2(912, 119)
-
-[node name="hinge6" parent="." unique_id=684328607 instance=ExtResource("2_g4yos")]
-position = Vector2(241, 117)
-
-[node name="hinge4" parent="." unique_id=406820140 instance=ExtResource("2_g4yos")]
-position = Vector2(686, -17)
-
-[node name="hinge14" parent="." unique_id=1843019109 instance=ExtResource("2_g4yos")]
-position = Vector2(891, -82)
-
-[node name="hinge15" parent="." unique_id=1502390296 instance=ExtResource("2_g4yos")]
-position = Vector2(260, -171)
-
-[node name="hinge7" parent="." unique_id=2098877329 instance=ExtResource("2_g4yos")]
-position = Vector2(1339, -30)
-
-[node name="hinge8" parent="." unique_id=1471438696 instance=ExtResource("2_g4yos")]
-position = Vector2(1240, 123)
-
-[node name="hinge9" parent="." unique_id=1608045973 instance=ExtResource("2_g4yos")]
-position = Vector2(1168, 495)
-
-[node name="hinge3" parent="." unique_id=1638457834 instance=ExtResource("2_g4yos")]
-position = Vector2(513, 490)
-scale = Vector2(1.02097, 2.58917)
-
-[node name="hinge2" parent="." unique_id=1446782465 instance=ExtResource("2_g4yos")]
-position = Vector2(184, 312)
-
-[node name="hinge10" parent="." unique_id=794390311 instance=ExtResource("2_g4yos")]
-position = Vector2(1012, 666)
-
-[node name="hinge11" parent="." unique_id=2135322471 instance=ExtResource("2_g4yos")]
-position = Vector2(527, 666)
-
-[node name="hinge12" parent="." unique_id=1284253721 instance=ExtResource("2_g4yos")]
-position = Vector2(88.0001, 666)
-
-[node name="hinge13" parent="." unique_id=215241812 instance=ExtResource("2_g4yos")]
-position = Vector2(1953, 241)
-
-[node name="potato" parent="." unique_id=609167893 instance=ExtResource("3_oi35y")]
-position = Vector2(188, -281)
-mass = 0.1
-
-[node name="saw" parent="." unique_id=810266063 instance=ExtResource("7_jlbvi")]
->>>>>>> origin/venus-fly-trap
 position = Vector2(1600, 395)
 
 [node name="Frog" parent="." unique_id=1108721984 instance=ExtResource("8_hh0fu")]
 position = Vector2(643, 372)
-=======
-[node name="hinge" parent="." unique_id=1249554434 instance=ExtResource("2_g4yos")]
-position = Vector2(438, 57)
-
-[node name="hinge5" parent="." unique_id=1241886209 instance=ExtResource("2_g4yos")]
-position = Vector2(912, 119)
-
-[node name="hinge6" parent="." unique_id=143288142 instance=ExtResource("2_g4yos")]
-position = Vector2(241, 117)
-
-[node name="hinge4" parent="." unique_id=1609720229 instance=ExtResource("2_g4yos")]
-position = Vector2(686, -17)
-
-[node name="hinge14" parent="." unique_id=132554631 instance=ExtResource("2_g4yos")]
-position = Vector2(891, -82)
-
-[node name="hinge15" parent="." unique_id=1659983079 instance=ExtResource("2_g4yos")]
-position = Vector2(260, -171)
-
-[node name="hinge7" parent="." unique_id=1226415885 instance=ExtResource("2_g4yos")]
-position = Vector2(1339, -30)
-
-[node name="hinge8" parent="." unique_id=1951520306 instance=ExtResource("2_g4yos")]
-position = Vector2(1240, 123)
-
-[node name="hinge9" parent="." unique_id=1792463087 instance=ExtResource("2_g4yos")]
-position = Vector2(1168, 495)
-
-[node name="hinge3" parent="." unique_id=2065994365 instance=ExtResource("2_g4yos")]
-position = Vector2(513, 490)
-scale = Vector2(1.02097, 2.58917)
-
-[node name="hinge2" parent="." unique_id=2090353651 instance=ExtResource("2_g4yos")]
-position = Vector2(184, 312)
-
-[node name="hinge10" parent="." unique_id=1064163382 instance=ExtResource("2_g4yos")]
-position = Vector2(1012, 666)
-
-[node name="hinge11" parent="." unique_id=1548440211 instance=ExtResource("2_g4yos")]
-position = Vector2(527, 666)
-
-[node name="hinge12" parent="." unique_id=1591877918 instance=ExtResource("2_g4yos")]
-position = Vector2(88.0001, 666)
-
-[node name="hinge13" parent="." unique_id=1111052730 instance=ExtResource("2_g4yos")]
-position = Vector2(1953, 241)
-
-[node name="potato" parent="." unique_id=342864114 instance=ExtResource("3_oi35y")]
-position = Vector2(188, -281)
-mass = 0.1
-
-[node name="saw" parent="." unique_id=368665528 instance=ExtResource("7_jlbvi")]
-position = Vector2(1600, 395)
-
-[node name="TileMap" type="TileMap" parent="." unique_id=1209577287]
-format = 2
->>>>>>> leg-changes
-=======
-[node name="hinge" parent="." unique_id=702581930 instance=ExtResource("2_g4yos")]
-position = Vector2(438, 57)
-
-[node name="hinge5" parent="." unique_id=655472487 instance=ExtResource("2_g4yos")]
-position = Vector2(912, 119)
-
-[node name="hinge6" parent="." unique_id=1001246650 instance=ExtResource("2_g4yos")]
-position = Vector2(241, 117)
-
-[node name="hinge4" parent="." unique_id=782027854 instance=ExtResource("2_g4yos")]
-position = Vector2(686, -17)
-
-[node name="hinge14" parent="." unique_id=775768428 instance=ExtResource("2_g4yos")]
-position = Vector2(891, -82)
-
-[node name="hinge15" parent="." unique_id=343545228 instance=ExtResource("2_g4yos")]
-position = Vector2(260, -171)
-
-[node name="hinge7" parent="." unique_id=503913981 instance=ExtResource("2_g4yos")]
-position = Vector2(1339, -30)
-
-[node name="hinge8" parent="." unique_id=885636267 instance=ExtResource("2_g4yos")]
-position = Vector2(1240, 123)
-
-[node name="hinge9" parent="." unique_id=1681744501 instance=ExtResource("2_g4yos")]
-position = Vector2(1168, 495)
-
-[node name="hinge3" parent="." unique_id=1935793798 instance=ExtResource("2_g4yos")]
-position = Vector2(513, 490)
-scale = Vector2(1.02097, 2.58917)
-
-[node name="hinge2" parent="." unique_id=1307938595 instance=ExtResource("2_g4yos")]
-position = Vector2(184, 312)
-
-[node name="hinge10" parent="." unique_id=124886531 instance=ExtResource("2_g4yos")]
-position = Vector2(1012, 666)
-
-[node name="hinge11" parent="." unique_id=1160425989 instance=ExtResource("2_g4yos")]
-position = Vector2(527, 666)
-
-[node name="hinge12" parent="." unique_id=777913663 instance=ExtResource("2_g4yos")]
-position = Vector2(88.0001, 666)
-
-[node name="hinge13" parent="." unique_id=481748945 instance=ExtResource("2_g4yos")]
-position = Vector2(1953, 241)
-
-[node name="potato" parent="." unique_id=837206711 instance=ExtResource("3_oi35y")]
-position = Vector2(188, -281)
-mass = 0.1
-
-[node name="saw" parent="." unique_id=645765874 instance=ExtResource("7_jlbvi")]
-position = Vector2(1600, 395)
 
 [node name="pauseLayer" type="CanvasLayer" parent="." unique_id=1418032881]
 
@@ -1942,8 +457,7 @@ grow_horizontal = 0
 mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 24
 text = "pause"
-script = ExtResource("8_hh0fu")
->>>>>>> origin/pause-menu
+script = ExtResource("9_pause")
 
 [connection signal="area_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_body_entered"]

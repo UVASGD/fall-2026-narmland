@@ -3,7 +3,6 @@
 .nomedia
 
 # Godot-specific ignores
-<<<<<<< HEAD
 .import/
 export.cfg
 export_credentials.cfg
@@ -16,17 +15,6 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
-.idea
-=======
-export.cfg
-export_credentials.cfg
-*.tmp
-*.translation
-
-# Mono/C# specific ignores (uncomment if using C#)
-#.mono/
-#data_*/
-#mono_crash.*.json
 
 # Export outputs
 *.exe
@@ -35,7 +23,7 @@ export_credentials.cfg
 *.ipa
 *.app
 
-# OS-specific overrides
+# Editor / OS-specific overrides
+.idea
 .DS_Store
 Thumbs.db
->>>>>>> leg-changes

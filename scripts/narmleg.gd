@@ -33,17 +33,7 @@ func update_grabbed_state(b: bool):
 		narm.emit_narm_leg_grabbed(self)
 	elif not b and grabbed:
 		narm.emit_narm_leg_released(self)
-	grabbed = b	
-=======
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		if mouseEntered:
-			if Global.mouseSelect == self:
-				global_position = get_global_mouse_position();
-				linear_velocity = Vector2.ZERO;
-			
-	
-	
->>>>>>> leg-changes
+	grabbed = b
 
 
 func _on_mouse_entered() -> void:

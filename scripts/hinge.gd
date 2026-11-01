@@ -18,6 +18,10 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
+	var active_narm = body.get_node_or_null("../")
+	if not active_narm:
+		return
+	
 	print("hinge entered by ", body.name,
 		" has_joint=", "hinge_joint" in body,
 		" held=", body.get("held"))

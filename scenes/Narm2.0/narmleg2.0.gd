@@ -1,0 +1,82 @@
+extends RigidBody2D
+
+enum Side { LEFT, RIGHT }
+
+@export var side : Side
+@onready var face : Sprite2D = $"../narmbody/face"
+
+@export var hinge_joint : PinJoint2D 
+@export var kick_impulse : float = 2000     # one-time burst on press (mass * speed)
+@export var spring_strength : float = 40.0   # higher = snappier, springier
+@export var damping : float = 1.0            # lower = more bounce, higher = smoother
+@export var hold_force : float = 5000.0      # hard cap on the sustained pull
+@export var kick_cooldown : float = 1.0   # seconds before the kick can fire again
+@export var other_leg : RigidBody2D          
+
+
+var mouseEntered;
+var held := false
+
+func _ready() -> void:
+	mouseEntered = false; 
+
+func _physics_process(_delta: float) -> void:
+	pass
+
+func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	if not Input.is_mouse_button_pressed(_my_button()):
+		return
+
+	var to_target := get_global_mouse_position() - state.transform.origin
+	state.apply_central_force(-state.total_gravity * mass)
+
+	var force := to_target * spring_strength - state.linear_velocity * damping * mass
+	state.apply_central_force(force.limit_length(hold_force))
+
+
+func _my_button() -> MouseButton:
+	return MOUSE_BUTTON_LEFT if side == Side.LEFT else MOUSE_BUTTON_RIGHT
+
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == _my_button():
+		if event.pressed:
+			if other_leg:
+				#make the other leg really heavy
+				other_leg.set_meta("base_mass", other_leg.mass)
+				other_leg.mass = other_leg.mass * 100.0
+			held = true
+			if hinge_joint:
+				hinge_joint.node_b = NodePath("")
+		else:
+			held = false
+			if other_leg and other_leg.has_meta("base_mass"):
+				other_leg.mass = other_leg.get_meta("base_mass")
+			# The leg may still be inside a hinge area, where body_entered won't fire again
+			for area in get_tree().get_nodes_in_group("hinge"):
+				if area.overlaps_body(self):
+					attach_to(area)
+					break
+
+
+func attach_to(hinge: Area2D) -> void:
+	if hinge_joint == null:
+		return
+	hinge_joint.global_position = hinge.global_position
+	hinge_joint.node_b = hinge.get_parent().get_path()
+
+
+#func _on_mouse_entered() -> void:
+#	mouseEntered = true;
+#	Global.mouseSelect = self
+#	face.change_face("curious");
+	
+
+#func _on_mouse_exited() -> void:
+#	mouseEntered = false;
+#	Global.mouseSelect = null
+#	face.change_face("smile");
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	mouseEntered = false

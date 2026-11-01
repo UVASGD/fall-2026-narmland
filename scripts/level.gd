@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var narmScene = preload("res://scenes/narm.tscn")
+@onready var narm2Scene = preload("res://scenes/Narm2.0/narm_2_0.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	narmRevive() # Replace with function body.
@@ -18,7 +19,8 @@ func _process(delta: float) -> void:
 func narmRevive() -> void:
 	print("revive")
 	Global.narmDead = false
-	var narmInstance = narmScene.instantiate()
+	#var narmInstance = narmScene.instantiate()
+	var narmInstance = narm2Scene.instantiate()
 	add_child(narmInstance)
 
 

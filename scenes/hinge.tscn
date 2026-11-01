@@ -1,28 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://fxoic5u7ywpn"]
+[gd_scene format=3 uid="uid://fxoic5u7ywpn"]
 
-[ext_resource type="Script" path="res://scripts/hinge.gd" id="1_fhynr"]
+[ext_resource type="Script" uid="uid://bh2lcv3o1yw5h" path="res://scripts/hinge.gd" id="1_fhynr"]
 [ext_resource type="Texture2D" uid="uid://bqvffhtg1lco3" path="res://assets/hinge.png" id="2_ni13c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dw5h"]
 size = Vector2(20, 13.0508)
 
-[node name="hinge" type="StaticBody2D"]
+[node name="hinge" type="StaticBody2D" unique_id=1237856364]
 z_index = 1
 position = Vector2(400, 177)
 scale = Vector2(1.01043, 1.60909)
 collision_layer = 2
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1732459427]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_fhynr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1311921685]
 visibility_layer = 3
 position = Vector2(0, 0.310722)
 shape = SubResource("RectangleShape2D_0dw5h")
 
-[node name="ColorRect" type="Sprite2D" parent="Area2D"]
+[node name="ColorRect" type="Sprite2D" parent="Area2D" unique_id=1710930245]
 position = Vector2(5.93807, 4.35029)
 scale = Vector2(0.230887, 0.133084)
 texture = ExtResource("2_ni13c")

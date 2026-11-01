@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 res://scenes/Narm2.0/narm_2_0.tscn
 res://scenes/Narm2.0/narmleg2.0.gd
+=======
+res://scenes/narm.tscn
+res://scripts/narmleg.gd
+res://scenes/hinge.tscn
+>>>>>>> leg-changes

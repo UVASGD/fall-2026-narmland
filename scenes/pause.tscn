@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://ck2nn64e74ym8"]
+
+[ext_resource type="Script" uid="uid://bknarwswqxb1v" path="res://scripts/unpause_button.gd" id="1_f1d2v"]
+[ext_resource type="Script" uid="uid://bd7x7a70vmwi1" path="res://scenes/pause_menu.gd" id="1_r8yp4"]
+
+[node name="Control" type="Control" unique_id=869540310]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r8yp4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=395432999]
+z_index = -1
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 0.63529414)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=410682209]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 191.0
+offset_right = 799.0
+offset_bottom = 236.0
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "[i]time has stopped![/i]"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1213324862]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 249.0
+offset_right = 1157.0
+offset_bottom = 489.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1516250268]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 1.8
+alignment = 1
+
+[node name="Unpause Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2090147871]
+layout_mode = 2
+tooltip_text = "resume the game"
+text = "resume time"
+script = ExtResource("1_f1d2v")
+
+[node name="Options Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1689374417]
+layout_mode = 2
+tooltip_text = "open Options menu"
+text = "give me options"
+
+[node name="Start Menu Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=575264988]
+layout_mode = 2
+tooltip_text = "return to Start menu"
+text = "i'm homesick"
+
+[node name="Quit Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2089207745]
+layout_mode = 2
+tooltip_text = "quit the game"
+text = "let me out"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Unpause Button" to="." method="_on_unpause_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Unpause Button" to="CenterContainer/VBoxContainer/Unpause Button" method="_on_pressed"]

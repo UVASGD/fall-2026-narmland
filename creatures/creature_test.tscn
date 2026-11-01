@@ -5,21 +5,43 @@
 [ext_resource type="Script" uid="uid://dqqr0hyicoj45" path="res://scenes/floor_28.gd" id="2_5fn42"]
 [ext_resource type="PackedScene" uid="uid://b083u567uxf80" path="res://creatures/lizard.tscn" id="3_5fn42"]
 [ext_resource type="PackedScene" uid="uid://bgw0tsbn2ae06" path="res://creatures/frog.tscn" id="5_lr6pm"]
+[ext_resource type="PackedScene" uid="uid://b61qv7tfd0vk3" path="res://creatures/lerm.tscn" id="4_hpb6t"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhpbe"]
-size = Vector2(1175.04, 44.3295)
+size = Vector2(1351.6467, 44.3295)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_minqh"]
 
 [node name="Node2D" type="Node2D" unique_id=1970441297]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1759089749]
+position = Vector2(607, 529)
+zoom = Vector2(0.5, 0.5)
+
 [node name="Debug grabber" parent="." unique_id=1092314908 instance=ExtResource("1_hpb6t")]
-position = Vector2(488, 432)
+position = Vector2(472, 432)
+grab_stiffness = 100.0
+grab_damping = 10.0
 
 [node name="Walls" type="Node2D" parent="." unique_id=1186846688]
 
+[node name="floor30" type="StaticBody2D" parent="Walls" unique_id=1626925129]
+position = Vector2(586, 1289)
+scale = Vector2(1.8856162, 20.815851)
+
+[node name="ColorRect" type="Sprite2D" parent="Walls/floor30" unique_id=763498413]
+position = Vector2(200, 0)
+scale = Vector2(7.98879, 0.381567)
+texture = ExtResource("1_q8e4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/floor30" unique_id=1908698737]
+position = Vector2(91.6667, 7.81249)
+scale = Vector2(1.34077, 2.04456)
+shape = SubResource("RectangleShape2D_rhpbe")
+
 [node name="floor" type="StaticBody2D" parent="Walls" unique_id=1585039203]
-position = Vector2(102, 568)
+position = Vector2(108, 568)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/floor" unique_id=1317096410]
@@ -377,8 +399,44 @@ position = Vector2(200, 0)
 scale = Vector2(7.98879, 0.381567)
 texture = ExtResource("1_q8e4o")
 
-[node name="Creature" parent="." unique_id=1161362259 instance=ExtResource("3_5fn42")]
-position = Vector2(488, 432)
+[node name="floor31" type="StaticBody2D" parent="Walls" unique_id=6879765]
+position = Vector2(2717, 400)
+scale = Vector2(1.8856162, 20.815851)
+
+[node name="ColorRect" type="Sprite2D" parent="Walls/floor31" unique_id=1587023617]
+position = Vector2(200, 0)
+scale = Vector2(7.98879, 0.381567)
+texture = ExtResource("1_q8e4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/floor31" unique_id=626570255]
+position = Vector2(-26.727783, 7.8124847)
+scale = Vector2(1.34077, 2.04456)
+shape = SubResource("RectangleShape2D_rhpbe")
+
+[node name="floor32" type="StaticBody2D" parent="Walls" unique_id=397854872]
+position = Vector2(-1470.0001, 320)
+scale = Vector2(1.8856162, 20.815851)
+
+[node name="ColorRect" type="Sprite2D" parent="Walls/floor32" unique_id=609283697]
+position = Vector2(200, 0)
+scale = Vector2(7.98879, 0.381567)
+texture = ExtResource("1_q8e4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/floor32" unique_id=1211557458]
+position = Vector2(-26.727783, 7.8124847)
+scale = Vector2(1.34077, 2.04456)
+shape = SubResource("RectangleShape2D_rhpbe")
+
+[node name="Lerm" parent="." unique_id=619675925 node_paths=PackedStringArray("target") instance=ExtResource("4_hpb6t")]
+position = Vector2(587, 713)
+target = NodePath("Target")
+burrow_thrust = 10000.0
+launch_speed_boost = 50.0
+recover_time = 3.0
+burrow_drag = 1.0
+
+[node name="Target" type="Node2D" parent="Lerm" unique_id=2091916396]
+position = Vector2(-8, -393)
 
 [node name="Frog" parent="." unique_id=1108721984 instance=ExtResource("5_lr6pm")]
 position = Vector2(637, 362)

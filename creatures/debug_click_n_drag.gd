@@ -1,5 +1,7 @@
 extends Node2D
 @onready var area = $Area2D
+@export var grab_stiffness: float = 1500.0
+@export var grab_damping: float = 40.0
 
 var grabbed_body : RigidBody2D
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +13,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	global_position = get_global_mouse_position()
 	if grabbed_body != null:
-		grabbed_body.global_position = global_position
+		var displacement := global_position - grabbed_body.global_position
+		var force := (displacement * grab_stiffness - grabbed_body.linear_velocity * grab_damping)
+
+		grabbed_body.apply_central_force(force)
 func _input(e):
 	if e is InputEventMouseButton:
 		if e.button_index == MouseButton.MOUSE_BUTTON_LEFT and e.pressed:

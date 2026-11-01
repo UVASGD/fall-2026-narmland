@@ -7,7 +7,10 @@
 [sub_resource type="Resource" id="Resource_4yxrg"]
 script = ExtResource("2_2jadk")
 body_index_2 = 1
-rest = Vector2(-20, -20)
+rest = Vector2(-20, 50)
+stiffness = 100.0
+damping = 10.0
+angular_damping = 10.0
 metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
 
 [sub_resource type="Resource" id="Resource_2jadk"]
@@ -15,6 +18,9 @@ script = ExtResource("2_2jadk")
 body_index_1 = 1
 body_index_2 = 2
 rest = Vector2(40, 0)
+stiffness = 100.0
+damping = 10.0
+angular_damping = 10.0
 metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
 
 [sub_resource type="Resource" id="Resource_xjau0"]
@@ -22,24 +28,32 @@ script = ExtResource("2_2jadk")
 body_index_1 = 2
 body_index_2 = 3
 rest = Vector2(40, 0)
+stiffness = 100.0
+damping = 10.0
+angular_damping = 10.0
 metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
 
 [sub_resource type="Resource" id="Resource_mloo6"]
 script = ExtResource("2_2jadk")
 body_index_1 = 1
 body_index_2 = 4
-rest = Vector2(-20, 20)
+rest = Vector2(-20, -20)
+stiffness = 100.0
+damping = 10.0
+angular_damping = 10.0
 metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
 
 [sub_resource type="Resource" id="Resource_tvavg"]
 script = ExtResource("2_2jadk")
 body_index_1 = 3
 body_index_2 = 5
-rest = Vector2(20, 20)
+rest = Vector2(20, -20)
+stiffness = 100.0
+damping = 10.0
+angular_damping = 10.0
 metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_m7ri8"]
-modification_count = 1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0lah"]
 atlas = ExtResource("2_k3137")
@@ -48,6 +62,7 @@ region = Rect2(62, 68, 1, 1)
 [sub_resource type="CircleShape2D" id="CircleShape2D_sxki6"]
 
 [node name="Node2D" type="Node2D" unique_id=1161362259 node_paths=PackedStringArray("bodies")]
+z_index = 1
 script = ExtResource("1_2jadk")
 bodies = [NodePath("Body/Head"), NodePath("Body/Body"), NodePath("Body/BodyMid"), NodePath("Body/BodyB"), NodePath("Body/LegF"), NodePath("Body/LegB")]
 joint_data = Array[ExtResource("2_2jadk")]([SubResource("Resource_4yxrg"), SubResource("Resource_2jadk"), SubResource("Resource_xjau0"), SubResource("Resource_mloo6"), SubResource("Resource_tvavg")])
@@ -99,7 +114,6 @@ bone_angle = 0.0
 
 [node name="Body" type="RigidBody2D" parent="Body" unique_id=672436749]
 collision_layer = 8
-mass = 0.1
 
 [node name="Body" type="Sprite2D" parent="Body/Body" unique_id=2000176005]
 modulate = Color(0, 0, 0, 1)
@@ -113,7 +127,6 @@ shape = SubResource("CircleShape2D_sxki6")
 [node name="BodyB" type="RigidBody2D" parent="Body" unique_id=1393923726]
 position = Vector2(38, -1)
 collision_layer = 8
-mass = 0.1
 
 [node name="BodyB" type="Sprite2D" parent="Body/BodyB" unique_id=1839730839]
 rotation = -0.033189286
@@ -126,7 +139,6 @@ shape = SubResource("CircleShape2D_sxki6")
 [node name="BodyMid" type="RigidBody2D" parent="Body" unique_id=1498774460]
 position = Vector2(19, -1)
 collision_layer = 8
-mass = 0.1
 
 [node name="BodyMid" type="Sprite2D" parent="Body/BodyMid" unique_id=558530621]
 modulate = Color(0.4745098, 0.44705883, 0.4745098, 1)
@@ -140,7 +152,6 @@ shape = SubResource("CircleShape2D_sxki6")
 [node name="LegF" type="RigidBody2D" parent="Body" unique_id=294224504]
 position = Vector2(-10, 18)
 collision_layer = 8
-mass = 0.1
 
 [node name="LegF" type="Sprite2D" parent="Body/LegF" unique_id=649312184]
 modulate = Color(1, 0, 0, 1)
@@ -167,7 +178,6 @@ shape = SubResource("CircleShape2D_sxki6")
 [node name="Head" type="RigidBody2D" parent="Body" unique_id=1211918491]
 position = Vector2(-15, -16)
 collision_layer = 8
-mass = 0.1
 
 [node name="Head" type="Sprite2D" parent="Body/Head" unique_id=810411372]
 modulate = Color(0, 1, 0, 1)

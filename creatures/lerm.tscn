@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://b61qv7tfd0vk3"]
+
+[ext_resource type="Script" uid="uid://ck8gybj571tr7" path="res://creatures/lerm.gd" id="1_ikl2j"]
+[ext_resource type="Texture2D" uid="uid://3hbd5h5m2nwd" path="res://assets/icon.svg" id="2_1dqex"]
+[ext_resource type="Script" uid="uid://bds4v0tlnpxnj" path="res://creatures/joint_data.gd" id="2_gvxt2"]
+
+[sub_resource type="Resource" id="Resource_gvxt2"]
+script = ExtResource("2_gvxt2")
+body_index_2 = 1
+rest = Vector2(12, 0)
+stiffness = 100.0
+damping = 10.0
+angular_stiffness = 12.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_8y278"]
+script = ExtResource("2_gvxt2")
+body_index_1 = 1
+body_index_2 = 2
+rest = Vector2(12, 0)
+stiffness = 100.0
+damping = 10.0
+angular_stiffness = 12.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_satjo"]
+script = ExtResource("2_gvxt2")
+body_index_1 = 2
+body_index_2 = 3
+rest = Vector2(12, 0)
+stiffness = 100.0
+damping = 10.0
+angular_stiffness = 12.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_m6q3f"]
+script = ExtResource("2_gvxt2")
+body_index_1 = 3
+body_index_2 = 4
+rest = Vector2(12, 0)
+stiffness = 100.0
+damping = 10.0
+angular_stiffness = 12.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_uys1d"]
+script = ExtResource("2_gvxt2")
+body_index_1 = 4
+body_index_2 = 5
+rest = Vector2(12, 0)
+stiffness = 100.0
+damping = 10.0
+angular_stiffness = 12.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_ihum4"]
+script = ExtResource("2_gvxt2")
+body_index_1 = 5
+body_index_2 = 6
+rest = Vector2(20, 0)
+stiffness = 100.0
+damping = 10.0
+angular_stiffness = 0.0
+angular_damping = 0.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcjre"]
+atlas = ExtResource("2_1dqex")
+region = Rect2(62, 68, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0up3c"]
+
+[node name="Lerm" type="Node2D" unique_id=619675925 node_paths=PackedStringArray("bodies")]
+script = ExtResource("1_ikl2j")
+burrow_thrust = 1000.0
+bodies = [NodePath("Body/Head"), NodePath("Body/BodyMid"), NodePath("Body/BodyMid2"), NodePath("Body/BodyMid3"), NodePath("Body/BodyMid4"), NodePath("Body/BodyMid5"), NodePath("Body/BodyB")]
+joint_data = Array[ExtResource("2_gvxt2")]([SubResource("Resource_gvxt2"), SubResource("Resource_8y278"), SubResource("Resource_satjo"), SubResource("Resource_m6q3f"), SubResource("Resource_uys1d"), SubResource("Resource_ihum4")])
+enabled = true
+
+[node name="Body" type="Node2D" parent="." unique_id=765990849]
+
+[node name="Head" type="RigidBody2D" parent="Body" unique_id=804614476]
+position = Vector2(-1, 1)
+collision_layer = 8
+
+[node name="Body" type="Sprite2D" parent="Body/Head" unique_id=2032840689]
+modulate = Color(0, 0, 0, 1)
+rotation = -0.033189286
+scale = Vector2(15.006099, 15.006099)
+texture = SubResource("AtlasTexture_dcjre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Head" unique_id=2029979299]
+shape = SubResource("CircleShape2D_0up3c")
+disabled = true
+
+[node name="BodyMid" type="RigidBody2D" parent="Body" unique_id=754316500]
+position = Vector2(41, 0)
+collision_layer = 8
+
+[node name="BodyMid" type="Sprite2D" parent="Body/BodyMid" unique_id=1150896216]
+modulate = Color(0.4745098, 0.44705883, 0.4745098, 1)
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_dcjre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyMid" unique_id=356407508]
+shape = SubResource("CircleShape2D_0up3c")
+disabled = true
+
+[node name="BodyMid2" type="RigidBody2D" parent="Body" unique_id=1926467060]
+position = Vector2(20, 0)
+collision_layer = 8
+
+[node name="BodyMid" type="Sprite2D" parent="Body/BodyMid2" unique_id=1645384345]
+modulate = Color(0.4745098, 0.44705883, 0.4745098, 1)
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_dcjre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyMid2" unique_id=1874365285]
+shape = SubResource("CircleShape2D_0up3c")
+disabled = true
+
+[node name="BodyMid3" type="RigidBody2D" parent="Body" unique_id=419592024]
+position = Vector2(62, 0)
+collision_layer = 8
+
+[node name="BodyMid" type="Sprite2D" parent="Body/BodyMid3" unique_id=953578880]
+modulate = Color(0.4745098, 0.44705883, 0.4745098, 1)
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_dcjre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyMid3" unique_id=1394107378]
+shape = SubResource("CircleShape2D_0up3c")
+disabled = true
+
+[node name="BodyMid4" type="RigidBody2D" parent="Body" unique_id=1427156941]
+position = Vector2(82, 0)
+collision_layer = 8
+
+[node name="BodyMid" type="Sprite2D" parent="Body/BodyMid4" unique_id=213645239]
+modulate = Color(0.4745098, 0.44705883, 0.4745098, 1)
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_dcjre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyMid4" unique_id=898349745]
+shape = SubResource("CircleShape2D_0up3c")
+disabled = true
+
+[node name="BodyMid5" type="RigidBody2D" parent="Body" unique_id=1805244950]
+position = Vector2(102, 0)
+collision_layer = 8
+
+[node name="BodyMid" type="Sprite2D" parent="Body/BodyMid5" unique_id=1652627174]
+modulate = Color(0.4745098, 0.44705883, 0.4745098, 1)
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_dcjre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyMid5" unique_id=805234821]
+shape = SubResource("CircleShape2D_0up3c")
+disabled = true
+
+[node name="BodyB" type="RigidBody2D" parent="Body" unique_id=2123177793]
+position = Vector2(122, 0)
+collision_layer = 8
+
+[node name="BodyB" type="Sprite2D" parent="Body/BodyB" unique_id=1567335493]
+rotation = -0.033189286
+scale = Vector2(15.013642, 15.013642)
+texture = SubResource("AtlasTexture_dcjre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/BodyB" unique_id=1938729921]
+shape = SubResource("CircleShape2D_0up3c")
+disabled = true

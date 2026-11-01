@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="leg-day"
-run/main_scene="uid://sd8wbrg3esqs"
+run/main_scene="uid://dy6fqmsd8t7s1"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://assets/icon.svg"
 

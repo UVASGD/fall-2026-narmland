@@ -4,6 +4,7 @@ extends "res://creatures/creature.gd"
 @onready var torso: RigidBody2D = $Bodies/Torso
 @onready var feet: RigidBody2D = $Bodies/Feet
 
+
 @export var small_hop_strength := 450
 @export var big_hop_strength := 1300
 @export var crouch_amount := 0.5

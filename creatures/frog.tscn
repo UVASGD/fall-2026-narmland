@@ -11,16 +11,25 @@ stiffness = 1000.0
 dampening = 30.0
 metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lwv56"]
-radius = 20.09975
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vy64"]
+radius = 21.071426
+height = 69.28571
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3agvj"]
-size = Vector2(21, 7)
+size = Vector2(37, 7)
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_y1mic"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3g0d"]
+size = Vector2(162, 20)
+
 [node name="Frog" type="Node2D" unique_id=1108721984 node_paths=PackedStringArray("bodies")]
 script = ExtResource("1_y1mic")
+small_hop_strength = null
+big_hop_strength = null
+crouch_amount = null
+small_crouch_time = null
+big_crouch_time = null
 bodies = [NodePath("Bodies/Torso"), NodePath("Bodies/Feet")]
 joint_data = Array[ExtResource("2_y14s4")]([SubResource("Resource_hh0fu")])
 
@@ -30,12 +39,13 @@ joint_data = Array[ExtResource("2_y14s4")]([SubResource("Resource_hh0fu")])
 lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bodies/Torso" unique_id=1994272114]
-scale = Vector2(1, 1.049)
+scale = Vector2(1.640625, 1.049)
 texture = ExtResource("1_3agvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bodies/Torso" unique_id=2055122187]
+rotation = 1.5707964
 scale = Vector2(2.8, 2.8)
-shape = SubResource("CircleShape2D_lwv56")
+shape = SubResource("CapsuleShape2D_7vy64")
 disabled = true
 
 [node name="Feet" type="RigidBody2D" parent="Bodies" unique_id=232324347]
@@ -43,7 +53,7 @@ lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bodies/Feet" unique_id=412504970]
 position = Vector2(13, 71)
-scale = Vector2(0.8, 0.256)
+scale = Vector2(1.3125, 0.256)
 texture = ExtResource("1_3agvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bodies/Feet" unique_id=637700293]
@@ -60,3 +70,11 @@ scale = Vector2(1.3000003, 1.3000003)
 rest = Transform2D(-5.6824803e-08, 1.3, -1.3, -5.6824803e-08, 0, 0)
 
 [node name="Timer" type="Timer" parent="." unique_id=1284400305]
+
+[node name="GrabBox" type="Area2D" parent="." unique_id=1021332824]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabBox" unique_id=713460017]
+position = Vector2(0, -65)
+shape = SubResource("RectangleShape2D_b3g0d")
+
+[connection signal="body_entered" from="GrabBox" to="." method="_on_grab_box_body_entered"]

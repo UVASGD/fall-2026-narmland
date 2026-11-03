@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://3hbd5h5m2nwd" path="res://assets/icon.svg" id="1_3agvj"]
 [ext_resource type="Script" uid="uid://b4hv4xrkcn0rr" path="res://creatures/frog.gd" id="1_y1mic"]
 [ext_resource type="Script" uid="uid://bds4v0tlnpxnj" path="res://creatures/joint_data.gd" id="2_y14s4"]
+[ext_resource type="Texture2D" uid="uid://uoq5a6frkrl" path="res://creatures/Screenshot 2026-11-02 at 6.27.20 PM.png" id="3_cy8rd"]
 
 [sub_resource type="Resource" id="Resource_hh0fu"]
 script = ExtResource("2_y14s4")
 body_index_2 = 1
 stiffness = 1000.0
-dampening = 30.0
 metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lwv56"]
@@ -30,8 +30,9 @@ joint_data = Array[ExtResource("2_y14s4")]([SubResource("Resource_hh0fu")])
 lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bodies/Torso" unique_id=1994272114]
-scale = Vector2(1, 1.049)
-texture = ExtResource("1_3agvj")
+position = Vector2(1.9999995, -1)
+scale = Vector2(0.14698164, 0.205421)
+texture = ExtResource("3_cy8rd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bodies/Torso" unique_id=2055122187]
 scale = Vector2(2.8, 2.8)

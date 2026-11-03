@@ -18,9 +18,10 @@ func _process(delta: float) -> void:
 func narm_revive() -> void:
 	print("revive")
 	Global.narmDead = false
-	#var narmInstance = narmScene.instantiate()
-	var narmInstance = narm2Scene.instantiate()
+	var narmInstance = narmScene.instantiate()
+	#var narmInstance2 = narm2Scene.instantiate()
 	add_child(narmInstance)
+	#add_child(narmInstance2)
 
 
 func _on_saw_body_entered(body: Node2D) -> void:

@@ -29,10 +29,14 @@ func _ready() -> void:
 	for child in get_children():
 		if child is RigidBody2D:
 			rigidbody_children.append(child)
+			#if child.name.begins_with("narmbody"):
+				
 		if child.name.begins_with("Feet"):
 			for foot in child.get_children():
-				if foot is RigidBody2D:
-					rigidbody_children.append(foot)
+				if foot.name.begins_with("legsegment6"):
+					rigidbody_children.insert(0, foot)
+				#else if foot.name.begins_with("legsegment8"):
+					#rigidbody_children.insert(1, foot)
 	print(rigidbody_children)
 	num_leg_one_side = (len(rigidbody_children) - 1)/2
 

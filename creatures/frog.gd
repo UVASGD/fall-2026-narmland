@@ -86,7 +86,7 @@ func apply_springs() -> void:
 		var offset = b2.global_position - b1.global_position
 		var rel_vel = b2.linear_velocity - b1.linear_velocity
 		
-		var force = (j.rest - offset) * j.stiffness - rel_vel * j.dampening
+		var force = (j.rest - offset) * j.stiffness - rel_vel * j.damping
 		b2.apply_central_force(force)
 		b1.apply_central_force(-force)
 		

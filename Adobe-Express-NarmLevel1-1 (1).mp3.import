@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://e0osuxf18ei5"
+path="res://.godot/imported/Adobe-Express-NarmLevel1-1 (1).mp3-e6a45798da0f10dcd1bf249052712364.mp3str"
+
+[deps]
+
+source_file="res://Adobe-Express-NarmLevel1-1 (1).mp3"
+dest_files=["res://.godot/imported/Adobe-Express-NarmLevel1-1 (1).mp3-e6a45798da0f10dcd1bf249052712364.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

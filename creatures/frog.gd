@@ -3,6 +3,7 @@ extends "res://creatures/creature.gd"
 @onready var timer = $Timer
 @onready var torso: RigidBody2D = $Bodies/Torso
 @onready var feet: RigidBody2D = $Bodies/Feet
+@onready var grab_box: Area2D = $Bodies/Torso/GrabBox
 
 
 @export var small_hop_strength := 450
@@ -16,9 +17,11 @@ var hops_till_big_hop := randi_range(2,4)
 var hop_queued := false
 var hopping := false
 
+var grab_joint: PinJoint2D
 var leg_joint: JointData
 var base_rest: Vector2
 var direction := 1
+var attatched_arm: RigidBody2D = null
 
 func _ready() -> void:
 	super._ready()
@@ -40,7 +43,9 @@ func _ready() -> void:
 	
 	
 func _physics_process(delta: float) -> void:
-	apply_springs()
+	super._physics_process(delta)
+	if attatched_arm and attatched_arm.grabbed:
+		release()
 	var is_big_hop = (hop_count >= hops_till_big_hop)
 	if hop_queued and not hopping and is_landed():
 		hop_queued = false
@@ -87,7 +92,7 @@ func apply_springs() -> void:
 		var offset = b2.global_position - b1.global_position
 		var rel_vel = b2.linear_velocity - b1.linear_velocity
 		
-		var force = (j.rest - offset) * j.stiffness - rel_vel * j.dampening
+		var force = (j.rest - offset) * j.stiffness - rel_vel * j.damping
 		b2.apply_central_force(force)
 		b1.apply_central_force(-force)
 		
@@ -107,3 +112,35 @@ func set_direction(new_direction: int) -> void:
 
 	base_rest.x = -base_rest.x
 	leg_joint.rest.x = -leg_joint.rest.x
+	
+	
+func grab(leg: RigidBody2D):
+	var active_narm = leg.get_node_or_null("../")
+	if leg.name.begins_with("legsegment6"):
+		var joint = active_narm.get_node_or_null("PinJointFeet2")
+		if is_instance_valid(joint):
+			joint.global_position = global_position
+			joint.node_b = get_parent().get_path()	
+		attatched_arm = leg
+	if leg.name.begins_with("legsegment8"):
+		var joint = active_narm.get_node_or_null("PinJointFeet1")
+		if is_instance_valid(joint):
+			joint.global_position = global_position
+			joint.node_b = joint.get_path_to(torso)
+		attatched_arm = leg
+
+func release():
+	if grab_joint:
+		grab_joint.queue_free()
+		grab_joint = null
+
+func _on_grab_box_body_entered(body: Node2D) -> void:
+	var active_narm = body.get_node_or_null("../")
+	if not active_narm:
+		return
+	if not (body.name.begins_with("legsegment6") or body.name.begins_with("legsegment8")):
+		return
+	grab(body)
+	
+func _on_grab_box_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

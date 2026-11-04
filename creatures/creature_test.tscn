@@ -2,11 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dlqvxpswfymb4" path="res://creatures/debug_click_n_drag.tscn" id="1_hpb6t"]
 [ext_resource type="Texture2D" uid="uid://dlgoi4yl7ie8c" path="res://assets/ground_01.png" id="1_q8e4o"]
-[ext_resource type="Script" uid="uid://dqqr0hyicoj45" path="res://scenes/floor_28.gd" id="2_5fn42"]
-[ext_resource type="PackedScene" uid="uid://b083u567uxf80" path="res://creatures/lizard.tscn" id="3_5fn42"]
-[ext_resource type="PackedScene" uid="uid://bgw0tsbn2ae06" path="res://creatures/frog.tscn" id="5_lr6pm"]
+[ext_resource type="Script" uid="uid://dqqr0hyicoj45" path="res://scripts/floor_28.gd" id="2_5fn42"]
 [ext_resource type="PackedScene" uid="uid://b61qv7tfd0vk3" path="res://creatures/lerm.tscn" id="4_hpb6t"]
-
+[ext_resource type="PackedScene" uid="uid://bgw0tsbn2ae06" path="res://creatures/frog.tscn" id="5_lr6pm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhpbe"]
 size = Vector2(1351.6467, 44.3295)
@@ -440,6 +438,13 @@ position = Vector2(-27, -574)
 
 [node name="Frog" parent="." unique_id=1108721984 instance=ExtResource("5_lr6pm")]
 position = Vector2(637, 362)
+small_hop_strength = 450
+big_hop_strength = 1300
+crouch_amount = 0.5
+small_crouch_time = 0.1
+big_crouch_time = 0.3
+enabled = true
+debug_force_scale = 1.0
 
 [connection signal="area_entered" from="Walls/brokenWall/Area2D" to="Walls/brokenWall" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Walls/brokenWall/Area2D" to="Walls/brokenWall" method="_on_area_2d_body_entered"]

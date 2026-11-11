@@ -8,11 +8,29 @@ extends Node2D
 signal narm_leg_grabbed(narm_leg: NarmLeg)
 signal narm_leg_released(narm_leg: NarmLeg)
 
+var rigidbody_children : Array[RigidBody2D] = []
+var num_leg_one_side = 3
+func _draw() -> void:
+	for i in range(len(rigidbody_children) - 2):
+		var child1 = rigidbody_children[i]
+		var child2
+
+		if i >= len(rigidbody_children) - 1:
+			child2 = child1
+		else:
+			child2 = rigidbody_children[i+1]
+		draw_line(child1.position, child2.position, Color.YELLOW, 20.0)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	global_position = Vector2(500, 72)
 	camera.global_position = global_position
+	for child in get_children():
+		if child is RigidBody2D:
+			rigidbody_children.append(child)
+	print(rigidbody_children)
+	num_leg_one_side = (len(rigidbody_children) - 1)/2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,6 +40,8 @@ func _process(delta: float) -> void:
 		Global.narmDead = true
 	if Global.narmDead:
 		narmDie()
+	if !Global.narmDead:
+		queue_redraw()
 
 func narmDie() -> void:
 	for child in get_children():

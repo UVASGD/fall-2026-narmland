@@ -13,24 +13,25 @@ func _ready() -> void:
 func _on_trigger_box_body_entered(body: Node2D) -> void:
 	if current_state == state.RELEASING:
 		return
-	if body.scene_file_path != "res://scenes/legsegment.tscn":
-		return
-	
-	var joint_name = ""
-	if body.name.begins_with("legsegment8"):
-		joint_name = "PinJointFeet1"
-	if body.name.begins_with("legsegment6"):
-		joint_name = "PinJointFeet2"
-	if joint_name == "":
-		return
-		
-	var active_narm = body.get_node_or_null("../")
-	if not active_narm:
-		return
-	
 	if current_state == state.OPEN:
+		if body.scene_file_path != "res://scenes/legsegment.tscn":
+			return
+			
+		var joint_name = ""
+		if body.name.begins_with("legsegment8"):
+			joint_name = "PinJointFeet1"
+		if body.name.begins_with("legsegment6"):
+			joint_name = "PinJointFeet2"
+		if joint_name == "":
+			return
+	
+		var active_narm = body.get_node_or_null("../")
+		if not active_narm:
+			return
 		catch(body, joint_name)
-	elif current_state == state.CLOSED and body != trapped_leg:
+	if current_state == state.CLOSED:
+		if body.scene_file_path != "res://scenes/potato.tscn":
+			return
 		release()
 
 func catch(body, joint_name):

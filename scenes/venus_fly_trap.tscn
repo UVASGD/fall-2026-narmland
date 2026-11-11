@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lald"]
 
 [node name="VenusFlyTrap" type="StaticBody2D" unique_id=825286552]
+z_index = 2
 script = ExtResource("1_hnmpv")
 
 [node name="TriggerBox" type="Area2D" parent="." unique_id=382881044]

@@ -81,20 +81,6 @@ func hop(strength: float, crouch_time: float, big_hop: bool) -> void:
 	feet.apply_central_impulse(impulse * feet.mass)
 	
 	hopping = false
-	
-#For springy physics. Can use base creature physics if thats preferred but
-#Made this for now to fit frog
-func apply_springs() -> void:
-	for j in joint_data:
-		var b1: RigidBody2D = bodies[j.body_index_1]
-		var b2: RigidBody2D = bodies[j.body_index_2]
-
-		var offset = b2.global_position - b1.global_position
-		var rel_vel = b2.linear_velocity - b1.linear_velocity
-		
-		var force = (j.rest - offset) * j.stiffness - rel_vel * j.damping
-		b2.apply_central_force(force)
-		b1.apply_central_force(-force)
 		
 func set_direction(new_direction: int) -> void:
 	if new_direction == direction:
@@ -109,23 +95,24 @@ func set_direction(new_direction: int) -> void:
 				child.flip_h = direction < 0
 				child.offset.x = -child.offset.x
 
-
 	base_rest.x = -base_rest.x
 	leg_joint.rest.x = -leg_joint.rest.x
-	
+
 	
 func grab(leg: RigidBody2D):
 	var active_narm = leg.get_node_or_null("../")
 	if leg.name.begins_with("legsegment6"):
 		var joint = active_narm.get_node_or_null("PinJointFeet2")
 		if is_instance_valid(joint):
-			joint.global_position = global_position
+			print("ATTATCHING LEG")
+			joint.global_position = leg.global_position
 			joint.node_b = get_parent().get_path()	
 		attatched_arm = leg
 	if leg.name.begins_with("legsegment8"):
 		var joint = active_narm.get_node_or_null("PinJointFeet1")
 		if is_instance_valid(joint):
-			joint.global_position = global_position
+			print("ATTATCHING LEG")
+			joint.global_position = leg.global_position
 			joint.node_b = joint.get_path_to(torso)
 		attatched_arm = leg
 
@@ -143,4 +130,8 @@ func _on_grab_box_body_entered(body: Node2D) -> void:
 	grab(body)
 	
 func _on_grab_box_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+	if not ("hinge_joint" in body) or body.hinge_joint == null:
+		return
+	var joint : PinJoint2D = body.hinge_joint
+	if not joint.node_b.is_empty() and joint.get_node_or_null(joint.node_b) == get_parent():
+		joint.node_b = NodePath("")

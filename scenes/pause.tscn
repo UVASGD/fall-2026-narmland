@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://ck2nn64e74ym8"]
 
-[ext_resource type="Script" uid="uid://bknarwswqxb1v" path="res://scripts/unpause_button.gd" id="1_f1d2v"]
 [ext_resource type="Script" uid="uid://bd7x7a70vmwi1" path="res://scenes/pause_menu.gd" id="1_r8yp4"]
 
 [node name="Control" type="Control" unique_id=869540310]
@@ -51,7 +50,6 @@ alignment = 1
 layout_mode = 2
 tooltip_text = "resume the game"
 text = "resume time"
-script = ExtResource("1_f1d2v")
 
 [node name="Options Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1689374417]
 layout_mode = 2
@@ -69,4 +67,4 @@ tooltip_text = "quit the game"
 text = "let me out"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Unpause Button" to="." method="_on_unpause_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Unpause Button" to="CenterContainer/VBoxContainer/Unpause Button" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

@@ -13,8 +13,10 @@ func _process(delta: float) -> void:
 
 func _on_unpause_button_pressed() -> void:
 	print("game unpaused")
-	var pause_scene = get_tree().current_scene.get_node("pauseScene")
 	hide()
 	get_tree().paused = false
-	get_tree().current_scene.get_node("pauseLayer").remove_child(pause_scene)
 	get_tree().current_scene.get_node("pauseLayer/pauseButton").show()
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()

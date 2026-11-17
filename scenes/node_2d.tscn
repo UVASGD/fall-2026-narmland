@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bgw0tsbn2ae06" path="res://creatures/frog.tscn" id="8_hh0fu"]
 [ext_resource type="Script" uid="uid://cw6omjf6tafqo" path="res://scripts/pause_button.gd" id="9_pause"]
 [ext_resource type="AudioStream" uid="uid://e0osuxf18ei5" path="res://Adobe-Express-NarmLevel1-1 (1).mp3" id="11_08kqv"]
+[ext_resource type="PackedScene" uid="uid://d0y6bvjrd2u8o" path="res://scenes/water.tscn" id="12_f6ptj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eeygk"]
 size = Vector2(1175.04, 44.3295)
@@ -48,12 +49,12 @@ position = Vector2(344, 568)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor8" unique_id=1353399603]
-position = Vector2(6.10352e-05, 1.90735e-06)
+position = Vector2(30.000061, -0.9868393)
 scale = Vector2(1, 1.25)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor8" unique_id=578796397]
-position = Vector2(163, 0)
+position = Vector2(159.99997, 1.3157883)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
@@ -102,12 +103,12 @@ position = Vector2(824, 568)
 scale = Vector2(0.2, 3.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor10" unique_id=1918633339]
-position = Vector2(6.10352e-05, -0.328946)
+position = Vector2(-34.99994, 53.618423)
 scale = Vector2(1, 1.27632)
 shape = SubResource("RectangleShape2D_eeygk")
 
 [node name="ColorRect" type="Sprite2D" parent="floor10" unique_id=154621371]
-position = Vector2(163, 0)
+position = Vector2(135.00012, 51.644733)
 scale = Vector2(5.72, 0.289475)
 texture = ExtResource("3_huwmc")
 
@@ -444,7 +445,7 @@ mass = 0.1
 position = Vector2(1600, 395)
 
 [node name="Frog" parent="." unique_id=1108721984 instance=ExtResource("8_hh0fu")]
-position = Vector2(643, 372)
+position = Vector2(285, 788)
 
 [node name="pauseLayer" type="CanvasLayer" parent="." unique_id=1418032881]
 
@@ -463,6 +464,10 @@ script = ExtResource("9_pause")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1258412371]
 stream = ExtResource("11_08kqv")
 autoplay = true
+
+[node name="Water" parent="." unique_id=24410860 instance=ExtResource("12_f6ptj")]
+position = Vector2(816.00006, 564)
+scale = Vector2(12.035, 7.51)
 
 [connection signal="area_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_body_entered"]

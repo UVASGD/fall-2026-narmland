@@ -10,7 +10,7 @@ enum Side { LEFT, RIGHT }
 @export var kick_impulse : float = 2000     # one-time burst on press (mass * speed)
 @export var spring_strength : float = 40.0   # higher = snappier, springier
 @export var damping : float = 1.0            # lower = more bounce, higher = smoother
-@export var hold_force : float = 10000.0      # hard cap on the sustained pull
+@export var hold_force : float = 20000.0      # hard cap on the sustained pull
 @export var kick_cooldown : float = 1.0   # seconds before the kick can fire again
 @export var other_leg : RigidBody2D          
 
@@ -41,6 +41,7 @@ func _my_button() -> MouseButton:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == _my_button():
+		face.change_face("curious")
 		if event.pressed:
 			if other_leg:
 				#make the other leg really heavy
@@ -50,6 +51,7 @@ func _input(event: InputEvent) -> void:
 			if hinge_joint:
 				hinge_joint.node_b = NodePath("")
 		else:
+			face.change_face("smile")
 			held = false
 			if other_leg and other_leg.has_meta("base_mass"):
 				other_leg.mass = other_leg.get_meta("base_mass")

@@ -1,7 +1,12 @@
+class_name Narm
 extends Node2D
 
 @onready var foot1 : RigidBody2D = $legsegment6
 @onready var foot2: RigidBody2D = $legsegment8
+@onready var camera: Camera2D = $narmbody/Camera
+
+signal narm_leg_grabbed(narm_leg: NarmLeg)
+signal narm_leg_released(narm_leg: NarmLeg)
 
 var rigidbody_children : Array[RigidBody2D] = []
 var num_leg_one_side = 3
@@ -16,31 +21,16 @@ func _draw() -> void:
 			child2 = rigidbody_children[i+1]
 		draw_line(child1.position, child2.position, Color.YELLOW, 20.0)
 
-		#if i != 3 and i != 7:
-			#draw_line(child1.position, child2.position, Color.YELLOW, 20.0)
-		#else:
-			#draw_line(rigidbody_children[0].position, rigidbody_children[4].position, Color.YELLOW, 20.0)
-			
-
-	draw_line(Vector2(50, 50), Vector2(250, 50), Color.GREEN, 5.0)
-	
-	# Draw a blue solid circle: draw_circle(center_pos, radius, color)
-	draw_circle(Vector2(150, 200), 50.0, Color.BLUE)
-	
-	# Draw a hollow white rectangle: draw_rect(rect, color, filled, width)
-	draw_rect(Rect2(50, 300, 200, 100), Color.WHITE, false, 3.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	global_position = Vector2(500, 72)
+	camera.global_position = global_position
 	for child in get_children():
 		if child is RigidBody2D:
 			rigidbody_children.append(child)
 	print(rigidbody_children)
 	num_leg_one_side = (len(rigidbody_children) - 1)/2
-	
-	
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,5 +47,11 @@ func narmDie() -> void:
 	for child in get_children():
 		if child is PinJoint2D:
 			child.queue_free();
+			
+func emit_narm_leg_grabbed(narm_leg: NarmLeg):
+	narm_leg_grabbed.emit(narm_leg)
+	
+func emit_narm_leg_released(narm_leg: NarmLeg):	
+	narm_leg_released.emit(narm_leg)
 				
 	

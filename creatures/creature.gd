@@ -101,10 +101,23 @@ func settle_bodyparts() -> void:
 		b2.apply_central_force(angular_force)
 		b1.apply_central_force(-angular_force)
 
+func anchor_bodypart(bp : RigidBody2D):
+	bp.freeze = true;
+	
+func unanchor_bodypart(bp : RigidBody2D):
+	bp.freeze = false;
 
+func get_joint_from_bp(bp1: RigidBody2D, bp2 : RigidBody2D) -> JointData:
+	for j in joint_data:
+		if bodies[j.body_index_1] == bp1 and bodies[j.body_index_2] == bp2 or bodies[j.body_index_2] == bp1 and bodies[j.body_index_1] == bp2:
+			return j;
+	return null;
+func get_joint_from_bpi(bp1: int, bp2 : int) -> JointData:
+	for j in joint_data:
+		if j.body_index_1 == bp1 and j.body_index_2 == bp2 or j.body_index_2 == bp1 and j.body_index_1 == bp2:
+			return j;
+	return null;
 #debugger draw for joint data
-
-
 func _draw() -> void:
 	if !enabled:
 		return

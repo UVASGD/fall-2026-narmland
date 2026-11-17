@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dp3wo6upg4o5w"]
+
+[ext_resource type="Script" uid="uid://cyvprsv8wra52" path="res://creatures/goober.gd" id="1_px748"]
+[ext_resource type="Script" uid="uid://bds4v0tlnpxnj" path="res://creatures/joint_data.gd" id="2_1vkn7"]
+[ext_resource type="Texture2D" uid="uid://3hbd5h5m2nwd" path="res://assets/icon.svg" id="2_hs21c"]
+
+[sub_resource type="Resource" id="Resource_px748"]
+script = ExtResource("2_1vkn7")
+body_index_2 = 1
+rest = Vector2(-10, 10)
+stiffness = 1222.0
+damping = 12.0
+angular_stiffness = 1222.0
+angular_damping = 12.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="Resource" id="Resource_hs21c"]
+script = ExtResource("2_1vkn7")
+body_index_2 = 2
+rest = Vector2(10, 10)
+stiffness = 1222.0
+damping = 12.0
+angular_stiffness = 1222.0
+angular_damping = 12.0
+metadata/_custom_type_script = "uid://bds4v0tlnpxnj"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vkn7"]
+atlas = ExtResource("2_hs21c")
+region = Rect2(62, 68, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rhd8l"]
+
+[node name="Goober" type="Node2D" unique_id=123857550 node_paths=PackedStringArray("bodies")]
+position = Vector2(-2, 0)
+script = ExtResource("1_px748")
+LegsIndex = Array[int]([1, 2])
+minStrideLength = 10.0
+bodies = [NodePath("Body/Body"), NodePath("Body/LegF"), NodePath("Body/LegB")]
+joint_data = Array[ExtResource("2_1vkn7")]([SubResource("Resource_px748"), SubResource("Resource_hs21c")])
+enabled = true
+
+[node name="Body" type="Node2D" parent="." unique_id=2111061633]
+
+[node name="Body" type="RigidBody2D" parent="Body" unique_id=632993892]
+collision_layer = 8
+
+[node name="Body" type="Sprite2D" parent="Body/Body" unique_id=325822134]
+modulate = Color(0, 0, 0, 1)
+rotation = -0.033189286
+scale = Vector2(15.006099, 15.006099)
+texture = SubResource("AtlasTexture_1vkn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Body" unique_id=1730418503]
+shape = SubResource("CircleShape2D_rhd8l")
+
+[node name="LegF" type="RigidBody2D" parent="Body" unique_id=176119283]
+position = Vector2(-10, 18)
+collision_layer = 8
+
+[node name="LegF" type="Sprite2D" parent="Body/LegF" unique_id=1356787096]
+modulate = Color(1, 0, 0, 1)
+rotation = -0.033189286
+scale = Vector2(15.006099, 15.006099)
+texture = SubResource("AtlasTexture_1vkn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LegF" unique_id=1037257744]
+shape = SubResource("CircleShape2D_rhd8l")
+
+[node name="LegB" type="RigidBody2D" parent="Body" unique_id=1939648336]
+position = Vector2(19, 17)
+collision_layer = 8
+
+[node name="LegB" type="Sprite2D" parent="Body/LegB" unique_id=2133333989]
+modulate = Color(1, 0, 0, 1)
+rotation = -0.03318928
+scale = Vector2(15.006099, 15.006099)
+texture = SubResource("AtlasTexture_1vkn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LegB" unique_id=870248933]
+shape = SubResource("CircleShape2D_rhd8l")

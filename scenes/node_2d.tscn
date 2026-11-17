@@ -11,11 +11,96 @@
 [ext_resource type="PackedScene" uid="uid://bgw0tsbn2ae06" path="res://creatures/frog.tscn" id="8_hh0fu"]
 [ext_resource type="Script" uid="uid://cw6omjf6tafqo" path="res://scripts/pause_button.gd" id="9_pause"]
 [ext_resource type="AudioStream" uid="uid://e0osuxf18ei5" path="res://Adobe-Express-NarmLevel1-1 (1).mp3" id="11_08kqv"]
+[ext_resource type="Texture2D" uid="uid://bn57a7onb2ufg" path="res://assets/narmland_tile_set.png" id="12_f6ptj"]
+[ext_resource type="Texture2D" uid="uid://3hbd5h5m2nwd" path="res://assets/icon.svg" id="13_hsdmi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eeygk"]
 size = Vector2(1175.04, 44.3295)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ngi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifa78"]
+texture = ExtResource("12_f6ptj")
+texture_region_size = Vector2i(128, 128)
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+0:0/size_in_atlas = Vector2i(4, 3)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xtx0q"]
+texture = ExtResource("13_hsdmi")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7vy64"]
+sources/0 = SubResource("TileSetAtlasSource_ifa78")
+sources/1 = SubResource("TileSetAtlasSource_xtx0q")
 
 [node name="level" type="Node2D" unique_id=171664973]
 script = ExtResource("1_3pif4")
@@ -26,7 +111,7 @@ position = Vector2(400, -300)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1007459999]
 modulate = Color(0.997739, 0.997807, 0.997807, 1)
-position = Vector2(1476, 624)
+position = Vector2(1295.0001, 593.00006)
 scale = Vector2(1.41412, 1.589)
 texture = ExtResource("2_y1i40")
 
@@ -463,6 +548,9 @@ script = ExtResource("9_pause")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1258412371]
 stream = ExtResource("11_08kqv")
 autoplay = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=896739105]
+tile_set = SubResource("TileSet_7vy64")
 
 [connection signal="area_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="brokenWall/Area2D" to="brokenWall" method="_on_area_2d_body_entered"]
